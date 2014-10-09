@@ -72,11 +72,21 @@
 		padding: 0;
 		border: 0;
 		box-shadow: none;
-		background:black;
+		background: inherit;
 		opacity: 0;
 		a {
 			padding: 10px 24px;
 			color:white;
+		}
+		.dark-bg & {
+			// when header bg is dark, drop down menu bg should also be dark
+			background:black;
+		}
+		&:not(.show) {
+			a {
+				// disable links when drop menu is invisible
+				pointer-events: none;
+			}
 		}
 	}
 }
@@ -144,6 +154,9 @@
 	}
 	.page-banner {
 		height:700px;
+		h1 {
+			max-width: 800px;
+		}
 	}
 }
 

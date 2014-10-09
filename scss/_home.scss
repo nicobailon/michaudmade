@@ -33,11 +33,12 @@
 		  @include transition-timing-function(ease-in);
 		}
 	}
-	&.scrolled {
-		h1:before,
-		h1:after {
-			opacity:0;
-		}
+}
+
+.page-banner.scrolled {
+	h1:before,
+	h1:after {
+		opacity:0;
 	}
 }
 

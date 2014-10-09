@@ -2,6 +2,8 @@
 $(function() {
 	var header = $(".header-menu");
 	var banner = $(".page-banner");
+    var extrastyle = $('<style type="text/css" class="extrastyle" />').appendTo('head');
+    $(extrastyle).text('.page-banner.scrolled h1:before, .page-banner.scrolled h1:after {opacity:0;}');
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
 
@@ -17,16 +19,19 @@ $(function() {
 
 // Nav dropdown
 $(function() {
-    var dropdowntoggle = $(".dropdown");
+    var dropdowntoggle = document.getElementById("dropdownModels");
     var dropdownmenu = $(".dropdown-menu");
     $(dropdowntoggle).hover(
-      function() {
-        $(dropdownmenu).addClass("show");
-      }, function() {
-        $(dropdownmenu).removeClass("show");
-      }
+        function() {
+            $(dropdownmenu).addClass("show");
+        }, function() {
+            setTimeout(function() {
+                $(dropdownmenu).removeClass("show");
+            }, 1000);
+        }
     );
 });
+
 
 
 // Features and Specs Hide/Show

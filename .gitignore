@@ -1,4 +1,5 @@
 # Ignore some files
 .DS_Store
+.dropbox
 **/.sass-cache
 **/.sass-cache/*

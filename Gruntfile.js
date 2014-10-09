@@ -7,6 +7,7 @@
 // npm install grunt-contrib-compass --save-dev
 // npm install grunt-contrib-imagemin --save-dev
 // npm install grunt-includes --save-dev
+// npm install grunt-uncss --save-dev
 
 module.exports = function(grunt) {
 
@@ -44,12 +45,20 @@ module.exports = function(grunt) {
     uncss: {
       build: {
         options: {
-          ignore: ['.dark-bg', '.scrolled', '.show'],
+          ignore  : [
+            '.dark-bg',
+            '.scrolled',
+            '.page-home .page-banner.scrolled h1:before',
+            '.page-home .page-banner.scrolled h1:after',
+            '.show'
+          ],
           // For some reason Uncss is only ignoring the first class specified so we have to apply this hack
-          raw: '.show { opacity:1 !important; } .page-banner.scrolled h1:before, .page-banner.scrolled h1:after { opacity:0; }',
+          // Commented out because Uncss was not adding the raw css below, used js instead
+          //raw : '.page-banner.scrolled h1:before, .page-banner.scrolled h1:after {opacity:0;}',
+          stylesheets  : ['css/main.css']
         },
         files: {
-          'build/css/main.css': ['build/*.html','build/models/*.html']
+          'build/css/main.css': ['*.html','models/*.html']
         }
       }
     },
@@ -73,7 +82,7 @@ module.exports = function(grunt) {
 
     // Uncomment for Development
     includes: {
-      build: {
+      default: {
         cwd: 'templates',
         src: [ '*.html','models/*.html' ], // checks templates dir for html files
         dest: '.', // export to current directory
@@ -81,22 +90,17 @@ module.exports = function(grunt) {
           flatten: true,
           includePath: 'partials' // directory containing partial includes
         }
+      },
+      build: {
+        cwd: 'templates',
+        src: [ '*.html','models/*.html' ], // checks templates dir for html files
+        dest: 'build/', // export to
+        options: {
+          flatten: true,
+          includePath: 'partials/output' // directory containing partial includes
+        }
       }
     },
-
-    // Uncomment for Build
-    // includes: {
-    //   build: {
-    //     cwd: 'templates',
-    //     src: [ '*.html','models/*.html' ], // checks templates dir for html files
-    //     // dest: '.', // export to current directory
-    //     dest: 'build/', // export to
-    //     options: {
-    //       flatten: true,
-    //       includePath: 'partials/output' // directory containing partial includes
-    //     }
-    //   }
-    // },
 
     imagemin: {                          // Task
       dynamic: {                         // Target
@@ -124,7 +128,7 @@ module.exports = function(grunt) {
       },
       includes: {
         files: ['partials/*.html','templates/*.html','templates/models/*.html'],
-        tasks: 'includes'
+        tasks: 'includes:default'
       }
     }
   });
@@ -141,7 +145,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default tasks
-  grunt.registerTask('default', ['includes','compass']);
+  grunt.registerTask('default', ['includes:default','compass']);
   // Build tasks
-  grunt.registerTask('build', ['includes','compass','uncss','cssmin','processhtml','imagemin','uglify']);
+  grunt.registerTask('build', ['compass','uncss','cssmin','includes:build','processhtml','imagemin','uglify']);
 };
