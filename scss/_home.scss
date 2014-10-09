@@ -1,0 +1,154 @@
+
+.page-home .container p {
+	font-size:20px;
+	line-height:30px;
+	margin-bottom:24px;
+}
+
+.page-home .page-banner {
+	h1 {
+		&:after {
+			content:"Please Scroll";
+			display: block;
+			background:url(../images/home-header-brown-divider.jpg) no-repeat top;
+			font-family: $opensans;
+			font-size:14px;
+			font-weight:300;
+			letter-spacing:0; 
+			margin:36px auto 0;
+			padding-top:8px;
+		}
+		// Down arrow
+		&:before {
+			content:url(../images/home-arrow-down.png);
+			display:block;
+			position: absolute;
+			width: 100%;
+			bottom:-1.5%;
+		}
+		&:after,
+		&:before {
+			@include transition-property(opacity);
+		  @include transition-duration(0.8s);
+		  @include transition-timing-function(ease-in);
+		}
+	}
+	&.scrolled {
+		h1:before,
+		h1:after {
+			opacity:0;
+		}
+	}
+}
+
+.intro-home {
+	height:500px;
+	background:url(../images/home-header.jpg) no-repeat top;
+	background-size: 100% auto;
+	background-size: cover;
+	color:white;
+}
+
+.models-home {
+	@extend %section-vertical-padding;
+	h2 {
+		&:after {
+			content:" ";
+			display:block;
+			margin: 10px auto 16px;
+			height:1px;
+			width:42px;
+			background:#000;
+		}
+	}
+	> .col-md-6 {
+		> .col-md-8 {
+			@extend %standard-spacing-bottom;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.models-home {
+		> .col-md-6 {
+			&:first-of-type {
+				padding-left:0;
+				background:url(../images/home-models-vert-line.png) no-repeat 100% 40%;
+				.col-md-8 {
+					padding-left: 0;
+					padding-right: 30px;
+				}
+			}
+			&:nth-of-type(2) {
+				padding-right: 0;
+				img.guitar {
+					float:right;
+				}
+				.col-md-8 {
+					padding-right: 0;
+					padding-left: 30px;
+				}
+			}
+		}
+	}
+}
+
+// Homepage: Features & Specs
+.features-home {
+	@extend %dark-bg;
+	@extend %section-vertical-padding;
+	.container > h4 {
+		@extend %standard-spacing-bottom;
+		color:white;
+	}
+	.col-md-4 {
+		color:$gray;
+		h4 {
+			margin-top:32px;
+		}
+		p {
+			max-width: 277px;
+			margin: 0 auto $standard-spacing;
+		}
+	}
+	.button {
+		margin-bottom:12px;
+	}
+}
+
+// Homepage: Gallery Section
+.gallery-home {
+	@extend %section-vertical-padding;
+	
+	h4,img {
+		@extend %standard-spacing-bottom;
+	}
+}
+@media (min-width: 800px) {
+	.gallery-home {
+		@include no-horizontal-padding;
+	}
+}
+
+.about-home {
+	@extend %section-vertical-padding;
+	@extend %dark-bg;
+	h4 {
+		margin-bottom:$standard-spacing/1.5;
+	}
+	p {
+		max-width: 943px;
+		margin: 0 auto 12px;
+		font-weight: 300;
+	}
+	background:url(../images/home-about-bg.jpg) no-repeat top;
+	background-size: cover;
+	color:white;
+}
+@media (min-width: 800px) {
+	.about-home {
+		.container {
+			@include no-horizontal-padding;
+		}
+	}
+}

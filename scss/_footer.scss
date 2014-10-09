@@ -1,0 +1,43 @@
+// Contact
+
+.contact {
+	@extend %section-vertical-padding;
+}
+
+form {
+	font-size:18px;
+	line-height:2;
+	border-color:#999;
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		width: 100%;
+		padding:0 12px;
+		margin-bottom:32px;
+		font-weight: 300;
+	}
+	input[type="text"],
+	input[type="email"] {
+		display: block;
+		height:45px;
+		line-height: 45px;
+	}
+	textarea {
+		height: 11em;
+	}
+	input[type="submit"] {
+		background:none;
+	}
+}
+
+// Footer
+
+footer {
+	@extend %dark-bg;
+	padding-top:$standard-spacing/1.5;
+	padding-bottom:$standard-spacing*2.5;
+	a {
+		display: inline-block;
+		max-width:50%;
+	}
+}

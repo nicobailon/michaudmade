@@ -1,0 +1,76 @@
+// Model Detail Page
+
+.intro-model {
+	height:400px;
+	background:url(../images/oo-r-header.jpg) no-repeat top;
+	background-size: 100% auto;
+	background-size: cover;
+	color:white;
+	// &.oo-r {
+	// 	background-image:url(../images/oo-r-header.jpg);
+	// }
+	&.om-r {
+		background-image:url(../images/om-r-header.jpg);
+	}
+}
+
+.model-info {
+	@extend %section-vertical-padding;
+}
+
+.model-description {
+	font-size:20px;
+	line-height:28px;
+	max-width: 944px;
+	margin: 0 auto $standard-spacing;
+	position: relative;
+	// Separator line
+	&:after {
+		content:" ";
+		display: block;
+		padding-top: $standard-spacing;
+		border-bottom:1px solid $brown;
+		width:170px;
+		margin:0 auto;
+	}
+}
+
+.model-specs {
+	margin-bottom:0;
+	font-size:16px;
+	li {
+		display: inline-block;
+		margin:0 18px;
+		position: relative;
+		span {
+			font-size:20px;
+		}
+		// Separator dot
+		&:not(:last-of-type) {
+			&:after {
+				@include border-radius(5px);
+				content: "";
+				display: inline-block;
+				height: 5px;
+				width: 5px;
+				background: #ccc;
+				position: absolute;
+				right: -20px;
+				top: 50%;
+			}
+		}
+		&:first-of-type {
+			margin-left:0;
+		}
+		&:last-of-type {
+			margin-right:0;
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+.model-detail-grid {
+	margin-bottom:$standard-spacing*1.25;;
+}

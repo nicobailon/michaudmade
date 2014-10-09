@@ -1,0 +1,195 @@
+// Header
+
+.header-menu {
+	position: fixed;
+	top:0;
+	min-height:$header-height;
+	line-height:58px;
+	width: 100%;
+	z-index: 1;
+	color:white;
+	a {
+		color:white;
+	}
+	@include transition-property(background,color);
+  @include transition-duration(0.4s,0.5s);
+  @include transition-timing-function(ease-out);
+  .container {
+  	@extend %no-horizontal-padding;
+  }
+	.button {
+		min-width: inherit;
+		text-align: center;
+		padding:0 20px;
+	}
+	.social-icon {
+		display:inline-block;
+		height:23px;
+		width:23px;
+		overflow: hidden;
+		text-indent:-9999px;
+		
+		&.facebook-link {
+			background:url(../images/nav-icon-facebook.png) no-repeat center;
+		}
+		&.instagram-link {
+			background:url(../images/nav-icon-instagram.png) no-repeat center;
+		}
+	}
+}
+
+
+.site-logo {
+	font-size:24px;
+	margin:0;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+
+
+.site-menu {
+	a,.dropdown {
+		display: inline-block;
+		padding:0 15px;
+		vertical-align: middle;
+		&.border-left:before {
+			content:url(../images/nav-vertical-divider.png);
+			border-left: 1px solid #ccc;
+			height: 14px;
+			position: relative;
+			right: 17px;
+		}
+	}
+	.dropdown-menu {
+		@include border-radius(0);
+		@include transition-property(opacity);
+	  @include transition-duration(0.3s);
+	  @include transition-timing-function(ease-in);
+		display: block;
+		top: 70px;
+		min-width: inherit;
+		padding: 0;
+		border: 0;
+		box-shadow: none;
+		background:black;
+		opacity: 0;
+		a {
+			padding: 10px 24px;
+			color:white;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.site-menu {
+		text-align:right;
+		.social-icon {
+			margin-left:15px;
+		}
+		.button {
+			margin:auto 15px;
+			& + .social-icon {
+				margin-left:$standard-spacing*1.5;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.site-menu {
+		font-size:13px;
+		a {
+			padding: 0 8px;
+			&.border-left:before {
+				right: 10px;
+			}
+		}
+		.button {
+			font-size:11px;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.site-menu {
+		line-height: 48px;
+	}
+}
+
+.page-banner {
+	@extend %preserve3d;
+	position: relative;
+  text-align:center;
+  // Fine Handcrafted Acoustic Steel String Guitars
+	h1 {
+		@extend %vertical-align;
+		max-width: 44%;
+		padding-bottom:12px;
+		margin: 0 auto;
+		letter-spacing: 3px;
+	}
+}
+
+@media (min-width: 800px) {
+	.header-menu {
+		line-height:$header-height;
+	}
+}
+
+@media (min-width: 992px) {
+	.site-logo {
+		line-height:100px;
+		text-align:left;
+	}
+	.page-banner {
+		height:700px;
+	}
+}
+
+@media (max-width: 940px) {
+	.page-banner {
+		padding-top:64px;
+		margin-top:0;
+		h1 {
+			font-size:36px;	
+			line-height: 40px;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.header-menu {
+		padding-bottom: 12px;
+	}
+}
+
+@media (max-width: 992px) {
+	.page-banner {
+		h1 {
+			padding-top: 64px;
+		}
+	}
+}
+
+@media (max-width: 624px) {
+	.page-banner {
+		h1 {
+			font-size: 28px;
+			line-height: 32px;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.page-banner {
+		h1 {
+			padding-top:48px;
+			font-size: 24px;
+			line-height: 28px;
+			&:after {
+				font-size:12px;
+			}
+		}
+	}
+}
