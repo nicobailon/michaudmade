@@ -3308,37 +3308,47 @@ footer .container {
 .about-home,
 footer {
   background: #141414;
+  font-weight: 300;
   color: white;
 }
 
-/* line 81, ../scss/_custom.scss */
+/* line 82, ../scss/_custom.scss */
 
 .features-home a,
 footer a {
   color: white;
 }
 
-/* line 89, ../scss/_custom.scss */
+/* line 85, ../scss/_custom.scss */
+
+.features-home a:focus,
+footer a:focus,
+.features-home a:hover,
+footer a:hover {
+  color: white;
+}
+
+/* line 94, ../scss/_custom.scss */
 
 img {
   max-width: 100%;
 }
 
-/* line 93, ../scss/_custom.scss */
+/* line 98, ../scss/_custom.scss */
 
 hr {
   border-color: #999999;
 }
 
-/* line 99, ../scss/_custom.scss */
-
 /* line 104, ../scss/_custom.scss */
+
+/* line 109, ../scss/_custom.scss */
 
 .show {
   opacity: 1 !important;
 }
 
-/* line 108, ../scss/_custom.scss */
+/* line 113, ../scss/_custom.scss */
 
 .button {
   display: inline-block;
@@ -3352,15 +3362,15 @@ hr {
   font-weight: bold;
 }
 
-/* line 118, ../scss/_custom.scss */
-
 /* line 123, ../scss/_custom.scss */
+
+/* line 128, ../scss/_custom.scss */
 
 .wrapper {
   padding: 0;
 }
 
-/* line 127, ../scss/_custom.scss */
+/* line 132, ../scss/_custom.scss */
 
 .container {
   max-width: 1280px;
@@ -3368,7 +3378,7 @@ hr {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
-  /* line 139, ../scss/_custom.scss */
+  /* line 144, ../scss/_custom.scss */
 
   .container {
     -webkit-font-smoothing: antialiased;
@@ -3376,39 +3386,39 @@ hr {
   }
 }
 
-/* line 144, ../scss/_custom.scss */
+/* line 149, ../scss/_custom.scss */
 
 h1,
 h2 {
   font-family: "Abril Fatface", cursive;
 }
 
-/* line 146, ../scss/_custom.scss */
+/* line 151, ../scss/_custom.scss */
 
 h1 span {
   color: #999999;
 }
 
-/* line 150, ../scss/_custom.scss */
+/* line 155, ../scss/_custom.scss */
 
 h1 {
   font-size: 52px;
   line-height: 58px;
 }
 
-/* line 154, ../scss/_custom.scss */
+/* line 159, ../scss/_custom.scss */
 
 h2 {
   font-size: 36px;
 }
 
-/* line 157, ../scss/_custom.scss */
+/* line 162, ../scss/_custom.scss */
 
 h3 {
   font-size: 24px;
 }
 
-/* line 160, ../scss/_custom.scss */
+/* line 165, ../scss/_custom.scss */
 
 h4 {
   font-weight: bold;

@@ -1,27 +1,23 @@
 // Header
 
 .header-menu {
+	@include transition-property(background,color);
+  @include transition-duration(0.4s,0.5s);
+  @include transition-timing-function(ease-out);
 	position: fixed;
 	top:0;
 	min-height:$header-height;
 	line-height:58px;
 	width: 100%;
 	z-index: 1;
+	font-weight:300;
 	color:white;
 	a {
 		color:white;
 	}
-	@include transition-property(background,color);
-  @include transition-duration(0.4s,0.5s);
-  @include transition-timing-function(ease-out);
   .container {
   	@extend %no-horizontal-padding;
   }
-	.button {
-		min-width: inherit;
-		text-align: center;
-		padding:0 20px;
-	}
 	.social-icon {
 		display:inline-block;
 		height:23px;
@@ -50,6 +46,7 @@
 
 .site-menu {
 	a,.dropdown {
+		@include font-smoothing(off);
 		display: inline-block;
 		padding:0 15px;
 		vertical-align: middle;
@@ -60,6 +57,11 @@
 			position: relative;
 			right: 17px;
 		}
+	}
+	.button {
+		min-width: inherit;
+		text-align: center;
+		padding:0 20px;
 	}
 	.dropdown-menu {
 		@include border-radius(0);
