@@ -147,5 +147,5 @@ module.exports = function(grunt) {
   // Default tasks
   grunt.registerTask('default', ['includes:default','compass']);
   // Build tasks
-  grunt.registerTask('build', ['compass','uncss','cssmin','includes:build','processhtml','imagemin','uglify']);
+  grunt.registerTask('build', ['includes:default','compass','uncss','cssmin','includes:build','processhtml','imagemin','uglify']);
 };
