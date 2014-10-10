@@ -89,6 +89,9 @@ $standard-spacing: 48px;
 	.container {
 		@extend %font-smoothing-off;
 	}
+	h4 {
+		@extend %font-smoothing-on;
+	}
 }
 
 img {

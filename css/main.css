@@ -8038,6 +8038,12 @@ button.close {
   margin-bottom: 48px;
 }
 
+/* line 41, ../scss/_custom.scss */
+.dark-bg h4, .features-home h4, .about-home h4, footer h4 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* line 45, ../scss/_custom.scss */
 .dark-bg, .features-home, .about-home, footer, .dark-bg .container, .features-home .container, .about-home .container, footer .container {
   -webkit-font-smoothing: subpixel-antialiased;
@@ -8087,27 +8093,27 @@ button.close {
   color: white;
 }
 
-/* line 94, ../scss/_custom.scss */
+/* line 97, ../scss/_custom.scss */
 img {
   max-width: 100%;
 }
 
-/* line 98, ../scss/_custom.scss */
+/* line 101, ../scss/_custom.scss */
 hr {
   border-color: #999999;
 }
 
-/* line 104, ../scss/_custom.scss */
+/* line 107, ../scss/_custom.scss */
 .dark-bg hr {
   border-color: #dedede;
 }
 
-/* line 109, ../scss/_custom.scss */
+/* line 112, ../scss/_custom.scss */
 .show {
   opacity: 1 !important;
 }
 
-/* line 113, ../scss/_custom.scss */
+/* line 116, ../scss/_custom.scss */
 .button {
   display: inline-block;
   padding: 0 28px;
@@ -8119,55 +8125,55 @@ hr {
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 123, ../scss/_custom.scss */
+/* line 126, ../scss/_custom.scss */
 .dark-bg .button {
   color: white;
 }
 
-/* line 128, ../scss/_custom.scss */
+/* line 131, ../scss/_custom.scss */
 .wrapper {
   padding: 0;
 }
 
-/* line 132, ../scss/_custom.scss */
+/* line 135, ../scss/_custom.scss */
 .container {
   max-width: 1280px;
   text-align: center;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
-  /* line 144, ../scss/_custom.scss */
+  /* line 147, ../scss/_custom.scss */
   .container {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 }
-/* line 149, ../scss/_custom.scss */
+/* line 152, ../scss/_custom.scss */
 h1, h2 {
   font-family: "Abril Fatface", cursive;
 }
-/* line 151, ../scss/_custom.scss */
+/* line 154, ../scss/_custom.scss */
 h1 span, h2 span {
   color: #999999;
 }
 
-/* line 155, ../scss/_custom.scss */
+/* line 158, ../scss/_custom.scss */
 h1 {
   font-size: 52px;
   line-height: 58px;
 }
 
-/* line 159, ../scss/_custom.scss */
+/* line 162, ../scss/_custom.scss */
 h2 {
   font-size: 36px;
 }
 
-/* line 162, ../scss/_custom.scss */
+/* line 165, ../scss/_custom.scss */
 h3 {
   font-size: 24px;
 }
 
-/* line 165, ../scss/_custom.scss */
+/* line 168, ../scss/_custom.scss */
 h4 {
   font-weight: bold;
 }
