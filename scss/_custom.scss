@@ -77,7 +77,6 @@ $standard-spacing: 48px;
 %dark-bg {
 	background:$almost-black;
 	@extend %font-smoothing-off;
-	font-weight: 300;
 	color:white;
 	a {
 		color:white;
@@ -85,12 +84,6 @@ $standard-spacing: 48px;
 		&:hover {
 			color:white;
 		}
-	}
-	.container {
-		@extend %font-smoothing-off;
-	}
-	h4 {
-		@extend %font-smoothing-on;
 	}
 }
 
