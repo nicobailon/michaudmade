@@ -33,6 +33,36 @@
 	}
 }
 
+// Current page nav links disabled/highlighted
+// TO DO: add Gallery Page
+body {
+	&.home {
+		// home
+		.site-logo a {
+			@extend %disable-link;
+			font-weight:bold;
+		}
+	}
+	&.single-models {
+		font-weight:bold;
+		// OO-R
+		&.postid-30 {
+
+		}
+		// OM-R
+		&.postid-31 {
+
+		}
+	}
+	&.page-id-98 {
+		// Features & Specs
+		a[href*="features"] {
+			@extend %disable-link;
+			font-weight:bold;
+		}
+	}
+}
+
 
 .site-logo {
 	font-size:24px;
@@ -63,7 +93,7 @@
 	}
 	.dropdown-menu {
 		@include border-radius(0);
-		@include transition-property(opacity);
+		@include transition-property(opacity,background);
 	  @include transition-duration(0.3s);
 	  @include transition-timing-function(ease-in);
 		display: block;

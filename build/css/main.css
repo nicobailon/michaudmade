@@ -3256,10 +3256,7 @@ ul {
 .dark-bg,
 .features-home,
 .about-home,
-footer,
-.features-home .container,
-.about-home .container,
-footer .container {
+footer {
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
 }
@@ -3308,18 +3305,17 @@ footer .container {
 .about-home,
 footer {
   background: #141414;
-  font-weight: 300;
   color: white;
 }
 
-/* line 82, ../scss/_custom.scss */
+/* line 81, ../scss/_custom.scss */
 
 .features-home a,
 footer a {
   color: white;
 }
 
-/* line 85, ../scss/_custom.scss */
+/* line 84, ../scss/_custom.scss */
 
 .features-home a:focus,
 footer a:focus,
@@ -3328,27 +3324,27 @@ footer a:hover {
   color: white;
 }
 
-/* line 94, ../scss/_custom.scss */
+/* line 90, ../scss/_custom.scss */
 
 img {
   max-width: 100%;
 }
 
-/* line 98, ../scss/_custom.scss */
+/* line 94, ../scss/_custom.scss */
 
 hr {
   border-color: #999999;
 }
 
-/* line 104, ../scss/_custom.scss */
+/* line 100, ../scss/_custom.scss */
 
-/* line 109, ../scss/_custom.scss */
+/* line 105, ../scss/_custom.scss */
 
 .show {
   opacity: 1 !important;
 }
 
-/* line 113, ../scss/_custom.scss */
+/* line 109, ../scss/_custom.scss */
 
 .button {
   display: inline-block;
@@ -3362,15 +3358,15 @@ hr {
   font-weight: bold;
 }
 
-/* line 123, ../scss/_custom.scss */
+/* line 119, ../scss/_custom.scss */
 
-/* line 128, ../scss/_custom.scss */
+/* line 124, ../scss/_custom.scss */
 
 .wrapper {
   padding: 0;
 }
 
-/* line 132, ../scss/_custom.scss */
+/* line 128, ../scss/_custom.scss */
 
 .container {
   max-width: 1280px;
@@ -3378,7 +3374,7 @@ hr {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
-  /* line 144, ../scss/_custom.scss */
+  /* line 140, ../scss/_custom.scss */
 
   .container {
     -webkit-font-smoothing: antialiased;
@@ -3386,39 +3382,39 @@ hr {
   }
 }
 
-/* line 149, ../scss/_custom.scss */
+/* line 145, ../scss/_custom.scss */
 
 h1,
 h2 {
   font-family: "Abril Fatface", cursive;
 }
 
-/* line 151, ../scss/_custom.scss */
+/* line 147, ../scss/_custom.scss */
 
 h1 span {
   color: #999999;
 }
 
-/* line 155, ../scss/_custom.scss */
+/* line 151, ../scss/_custom.scss */
 
 h1 {
   font-size: 52px;
   line-height: 58px;
 }
 
-/* line 159, ../scss/_custom.scss */
+/* line 155, ../scss/_custom.scss */
 
 h2 {
   font-size: 36px;
 }
 
-/* line 162, ../scss/_custom.scss */
+/* line 158, ../scss/_custom.scss */
 
 h3 {
   font-size: 24px;
 }
 
-/* line 165, ../scss/_custom.scss */
+/* line 161, ../scss/_custom.scss */
 
 h4 {
   font-weight: bold;
@@ -3445,17 +3441,16 @@ h4 {
   line-height: 58px;
   width: 100%;
   z-index: 1;
-  font-weight: 300;
   color: white;
 }
 
-/* line 15, ../scss/_header.scss */
+/* line 14, ../scss/_header.scss */
 
 .header-menu a {
   color: white;
 }
 
-/* line 21, ../scss/_header.scss */
+/* line 20, ../scss/_header.scss */
 
 .header-menu .social-icon {
   display: inline-block;
@@ -3465,19 +3460,19 @@ h4 {
   text-indent: -9999px;
 }
 
-/* line 28, ../scss/_header.scss */
+/* line 27, ../scss/_header.scss */
 
 .header-menu .social-icon.facebook-link {
   background: url(../images/nav-icon-facebook.png) no-repeat center;
 }
 
-/* line 31, ../scss/_header.scss */
+/* line 30, ../scss/_header.scss */
 
 .header-menu .social-icon.instagram-link {
   background: url(../images/nav-icon-instagram.png) no-repeat center;
 }
 
-/* line 38, ../scss/_header.scss */
+/* line 37, ../scss/_header.scss */
 
 .site-logo {
   font-size: 24px;
@@ -3486,18 +3481,16 @@ h4 {
   text-transform: uppercase;
 }
 
-/* line 48, ../scss/_header.scss */
+/* line 47, ../scss/_header.scss */
 
 .site-menu a,
 .site-menu .dropdown {
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: auto;
   display: inline-block;
   padding: 0 15px;
   vertical-align: middle;
 }
 
-/* line 53, ../scss/_header.scss */
+/* line 51, ../scss/_header.scss */
 
 .site-menu a.border-left:before {
   content: url(../images/nav-vertical-divider.png);
@@ -3507,7 +3500,7 @@ h4 {
   right: 17px;
 }
 
-/* line 61, ../scss/_header.scss */
+/* line 59, ../scss/_header.scss */
 
 .site-menu .button {
   min-width: inherit;
@@ -3515,7 +3508,7 @@ h4 {
   padding: 0 20px;
 }
 
-/* line 66, ../scss/_header.scss */
+/* line 64, ../scss/_header.scss */
 
 .site-menu .dropdown-menu {
   -webkit-border-radius: 0;
@@ -3545,41 +3538,41 @@ h4 {
   opacity: 0;
 }
 
-/* line 79, ../scss/_header.scss */
+/* line 77, ../scss/_header.scss */
 
 .site-menu .dropdown-menu a {
   padding: 10px 24px;
   color: white;
 }
 
-/* line 83, ../scss/_header.scss */
+/* line 81, ../scss/_header.scss */
 
-/* line 88, ../scss/_header.scss */
+/* line 86, ../scss/_header.scss */
 
 .site-menu .dropdown-menu:not(.show) a {
   pointer-events: none;
 }
 
 @media (min-width: 992px) {
-  /* line 97, ../scss/_header.scss */
+  /* line 95, ../scss/_header.scss */
 
   .site-menu {
     text-align: right;
   }
 
-  /* line 99, ../scss/_header.scss */
+  /* line 97, ../scss/_header.scss */
 
   .site-menu .social-icon {
     margin-left: 15px;
   }
 
-  /* line 102, ../scss/_header.scss */
+  /* line 100, ../scss/_header.scss */
 
   .site-menu .button {
     margin: auto 15px;
   }
 
-  /* line 104, ../scss/_header.scss */
+  /* line 102, ../scss/_header.scss */
 
   .site-menu .button + .social-icon {
     margin-left: 72px;
@@ -3587,25 +3580,25 @@ h4 {
 }
 
 @media (max-width: 480px) {
-  /* line 112, ../scss/_header.scss */
+  /* line 110, ../scss/_header.scss */
 
   .site-menu {
     font-size: 13px;
   }
 
-  /* line 114, ../scss/_header.scss */
+  /* line 112, ../scss/_header.scss */
 
   .site-menu a {
     padding: 0 8px;
   }
 
-  /* line 116, ../scss/_header.scss */
+  /* line 114, ../scss/_header.scss */
 
   .site-menu a.border-left:before {
     right: 10px;
   }
 
-  /* line 120, ../scss/_header.scss */
+  /* line 118, ../scss/_header.scss */
 
   .site-menu .button {
     font-size: 11px;
@@ -3613,21 +3606,21 @@ h4 {
 }
 
 @media (max-width: 992px) {
-  /* line 127, ../scss/_header.scss */
+  /* line 125, ../scss/_header.scss */
 
   .site-menu {
     line-height: 48px;
   }
 }
 
-/* line 132, ../scss/_header.scss */
+/* line 130, ../scss/_header.scss */
 
 .page-banner {
   position: relative;
   text-align: center;
 }
 
-/* line 137, ../scss/_header.scss */
+/* line 135, ../scss/_header.scss */
 
 .page-banner h1 {
   max-width: 52%;
@@ -3637,7 +3630,7 @@ h4 {
 }
 
 @media (min-width: 800px) {
-  /* line 147, ../scss/_header.scss */
+  /* line 145, ../scss/_header.scss */
 
   .header-menu {
     line-height: 100px;
@@ -3645,20 +3638,20 @@ h4 {
 }
 
 @media (min-width: 992px) {
-  /* line 153, ../scss/_header.scss */
+  /* line 151, ../scss/_header.scss */
 
   .site-logo {
     line-height: 100px;
     text-align: left;
   }
 
-  /* line 157, ../scss/_header.scss */
+  /* line 155, ../scss/_header.scss */
 
   .page-banner {
     height: 700px;
   }
 
-  /* line 159, ../scss/_header.scss */
+  /* line 157, ../scss/_header.scss */
 
   .page-banner h1 {
     max-width: 800px;
@@ -3666,14 +3659,14 @@ h4 {
 }
 
 @media (max-width: 940px) {
-  /* line 166, ../scss/_header.scss */
+  /* line 164, ../scss/_header.scss */
 
   .page-banner {
     padding-top: 64px;
     margin-top: 0;
   }
 
-  /* line 169, ../scss/_header.scss */
+  /* line 167, ../scss/_header.scss */
 
   .page-banner h1 {
     font-size: 36px;
@@ -3682,7 +3675,7 @@ h4 {
 }
 
 @media (max-width: 800px) {
-  /* line 177, ../scss/_header.scss */
+  /* line 175, ../scss/_header.scss */
 
   .header-menu {
     padding-bottom: 12px;
@@ -3690,7 +3683,7 @@ h4 {
 }
 
 @media (max-width: 992px) {
-  /* line 184, ../scss/_header.scss */
+  /* line 182, ../scss/_header.scss */
 
   .page-banner h1 {
     padding-top: 64px;
@@ -3698,7 +3691,7 @@ h4 {
 }
 
 @media (max-width: 624px) {
-  /* line 192, ../scss/_header.scss */
+  /* line 190, ../scss/_header.scss */
 
   .page-banner h1 {
     font-size: 28px;
@@ -3707,7 +3700,7 @@ h4 {
 }
 
 @media (max-width: 480px) {
-  /* line 201, ../scss/_header.scss */
+  /* line 199, ../scss/_header.scss */
 
   .page-banner h1 {
     padding-top: 48px;
@@ -3715,7 +3708,7 @@ h4 {
     line-height: 28px;
   }
 
-  /* line 205, ../scss/_header.scss */
+  /* line 203, ../scss/_header.scss */
 
   .page-banner h1:after {
     font-size: 12px;
@@ -3889,11 +3882,10 @@ h4 {
 .about-home p {
   max-width: 943px;
   margin: 0 auto 12px;
-  font-weight: 300;
 }
 
 @media (min-width: 800px) {
-  /* line 151, ../scss/_home.scss */
+  /* line 150, ../scss/_home.scss */
 
   .about-home .container {
     padding-left: 0;

@@ -85,6 +85,13 @@ $standard-spacing: 48px;
 			color:white;
 		}
 	}
+	.site-menu .dropdown-menu {
+		background:$almost-black;
+	}
+}
+
+%disable-link {
+	pointer-events:none;
 }
 
 img {
