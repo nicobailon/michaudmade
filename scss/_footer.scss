@@ -20,7 +20,9 @@ form {
 		padding:0 12px;
 		margin-bottom:32px;
 		font-weight: 300;
-		&:focus {
+		&:focus,
+		&:active,
+		&:hover {
 			outline: 2px solid black;
 		}
 	}
