@@ -8587,53 +8587,57 @@ body.page-id-98 a[href*="features"] {
     padding-left: 30px;
   }
 }
-/* line 101, ../scss/_home.scss */
+/* line 98, ../scss/_home.scss */
+.features-home {
+  text-align: center;
+}
+/* line 102, ../scss/_home.scss */
 .features-home .container > h4 {
   color: white;
 }
-/* line 105, ../scss/_home.scss */
+/* line 106, ../scss/_home.scss */
 .features-home .col-md-4 {
   color: #999999;
 }
-/* line 107, ../scss/_home.scss */
+/* line 108, ../scss/_home.scss */
 .features-home .col-md-4 h4 {
   margin-top: 32px;
 }
-/* line 110, ../scss/_home.scss */
+/* line 111, ../scss/_home.scss */
 .features-home .col-md-4 p {
   max-width: 277px;
   margin: 0 auto 48px;
 }
-/* line 115, ../scss/_home.scss */
+/* line 116, ../scss/_home.scss */
 .features-home .button {
-  margin-bottom: 12px;
+  margin: 0 auto;
 }
 
 @media (min-width: 800px) {
-  /* line 129, ../scss/_home.scss */
+  /* line 130, ../scss/_home.scss */
   .gallery-home {
     padding-left: 0;
     padding-right: 0;
   }
 }
-/* line 134, ../scss/_home.scss */
+/* line 135, ../scss/_home.scss */
 .about-home {
   background: url(../images/home-about-bg.jpg) no-repeat top;
   background-size: cover;
   color: white;
 }
-/* line 137, ../scss/_home.scss */
+/* line 138, ../scss/_home.scss */
 .about-home h4 {
   margin-bottom: 32px;
 }
-/* line 140, ../scss/_home.scss */
+/* line 141, ../scss/_home.scss */
 .about-home p {
   max-width: 943px;
   margin: 0 auto 12px;
 }
 
 @media (min-width: 800px) {
-  /* line 150, ../scss/_home.scss */
+  /* line 151, ../scss/_home.scss */
   .about-home .container {
     padding-left: 0;
     padding-right: 0;
@@ -8862,34 +8866,38 @@ form textarea {
   margin-bottom: 32px;
   font-weight: 300;
 }
-/* line 23, ../scss/_footer.scss */
-form input[type="text"]:focus,
+/* line 25, ../scss/_footer.scss */
+form input[type="text"]:focus, form input[type="text"]:active, form input[type="text"]:hover,
 form input[type="email"]:focus,
-form textarea:focus {
+form input[type="email"]:active,
+form input[type="email"]:hover,
+form textarea:focus,
+form textarea:active,
+form textarea:hover {
   outline: 2px solid black;
 }
-/* line 28, ../scss/_footer.scss */
+/* line 30, ../scss/_footer.scss */
 form input[type="text"],
 form input[type="email"] {
   display: block;
   height: 45px;
   line-height: 45px;
 }
-/* line 33, ../scss/_footer.scss */
+/* line 35, ../scss/_footer.scss */
 form textarea {
   height: 11em;
 }
-/* line 36, ../scss/_footer.scss */
+/* line 38, ../scss/_footer.scss */
 form input[type="submit"] {
   background: none;
 }
 
-/* line 43, ../scss/_footer.scss */
+/* line 45, ../scss/_footer.scss */
 footer {
   padding-top: 32px;
   padding-bottom: 120px;
 }
-/* line 47, ../scss/_footer.scss */
+/* line 49, ../scss/_footer.scss */
 footer a {
   display: inline-block;
   max-width: 50%;
