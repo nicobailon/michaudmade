@@ -154,6 +154,12 @@ hr {
 		color:white;
 		background:black;
 	}
+	.dark-bg &:hover,
+	.dark-bg &:active,
+	.dark-bg &:focus {
+		color:black;
+		background:white;
+	}
 }
 
 .wrapper {
