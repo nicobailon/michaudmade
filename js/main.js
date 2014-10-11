@@ -3,7 +3,8 @@ $(function() {
 	var header = $(".header-menu");
 	var banner = $(".page-banner");
     var extrastyle = $('<style type="text/css" class="extrastyle" />').appendTo('head');
-    $(extrastyle).text('.page-banner.scrolled h1:before, .page-banner.scrolled h1:after {opacity:0;} .dark-bg .site-menu .dropdown-menu{background:#141414;}');
+    $(extrastyle).text('.page-banner.scrolled h1:before, .page-banner.scrolled h1:after {opacity:0;} .dark-bg .site-menu .dropdown-menu{background:#141414;} 
+.dark-bg .button:hover, .dark-bg .button:active, .dark-bg .button:focus { color:black; background:white; }');
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
 

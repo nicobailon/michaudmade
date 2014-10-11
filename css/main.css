@@ -8180,56 +8180,51 @@ hr {
   color: white;
   background: black;
 }
-/* line 159, ../scss/_custom.scss */
-.dark-bg .button:hover, .dark-bg .button:active, .dark-bg .button:focus {
-  color: black;
-  background: white;
-}
 
-/* line 165, ../scss/_custom.scss */
+/* line 159, ../scss/_custom.scss */
 .wrapper {
   padding: 0;
 }
 
-/* line 169, ../scss/_custom.scss */
+/* line 163, ../scss/_custom.scss */
 .container {
   max-width: 1280px;
   text-align: center;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
-  /* line 181, ../scss/_custom.scss */
+  /* line 175, ../scss/_custom.scss */
   .container {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 }
-/* line 186, ../scss/_custom.scss */
+/* line 180, ../scss/_custom.scss */
 h1, h2 {
   font-family: "Abril Fatface", cursive;
 }
-/* line 188, ../scss/_custom.scss */
+/* line 182, ../scss/_custom.scss */
 h1 span, h2 span {
   color: #999999;
 }
 
-/* line 192, ../scss/_custom.scss */
+/* line 186, ../scss/_custom.scss */
 h1 {
   font-size: 52px;
   line-height: 58px;
 }
 
-/* line 196, ../scss/_custom.scss */
+/* line 190, ../scss/_custom.scss */
 h2 {
   font-size: 36px;
 }
 
-/* line 199, ../scss/_custom.scss */
+/* line 193, ../scss/_custom.scss */
 h3 {
   font-size: 24px;
 }
 
-/* line 202, ../scss/_custom.scss */
+/* line 196, ../scss/_custom.scss */
 h4 {
   font-weight: bold;
 }
