@@ -80,18 +80,23 @@ $standard-spacing: 48px;
 	color:white;
 	a,
 	.dropdown-toggle {
-		@include transition-property(color);
-		@include transition-duration(0.28s);
-		@include transition-timing-function(ease-out);
 		color:white;
-		&:focus,
-		&:hover {
-			text-decoration:none;
-			color:$brown;
-		}
 	}
 	.site-menu .dropdown-menu {
 		background:$almost-black;
+	}
+}
+
+a,
+.dropdown-toggle {
+	@include transition-property(color);
+	@include transition-duration(0.28s);
+	@include transition-timing-function(ease-out);
+	&:focus,
+	&:hover,
+	&:active {
+		text-decoration:none;
+		color:$brown;
 	}
 }
 
@@ -125,8 +130,8 @@ hr {
 
 .button {
 	@include transition-property(background,color);
-	@include transition-duration(0.28s);
-	@include transition-timing-function(ease-out);
+	@include transition-duration(0.4s);
+	@include transition-timing-function(ease-in-out);
 	display:inline-block;
 	padding:0 28px;
 	border:1px solid;
@@ -136,8 +141,16 @@ hr {
 	font-size:14px;
 	text-transform:uppercase;
 	font-weight:bold;
+	.site-menu &:hover,
+	.site-menu &:active,
+	.site-menu &:focus {
+		background:white;
+		color:black;
+	}
 	.dark-bg &,
-	&:hover {
+	&:hover,
+	&:active,
+	&:focus {
 		color:white;
 		background:black;
 	}

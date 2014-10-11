@@ -167,6 +167,7 @@ body {
 .page-banner {
 	@extend %preserve3d;
 	position: relative;
+	border-bottom:1px solid black;
   text-align:center;
   // Fine Handcrafted Acoustic Steel String Guitars
 	h1 {
