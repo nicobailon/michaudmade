@@ -3912,39 +3912,45 @@ h4 {
   }
 }
 
-/* line 101, ../scss/_home.scss */
+/* line 98, ../scss/_home.scss */
+
+.features-home {
+  text-align: center;
+}
+
+/* line 102, ../scss/_home.scss */
 
 .features-home .container > h4 {
   color: white;
 }
 
-/* line 105, ../scss/_home.scss */
+/* line 106, ../scss/_home.scss */
 
 .features-home .col-md-4 {
   color: #999999;
 }
 
-/* line 107, ../scss/_home.scss */
+/* line 108, ../scss/_home.scss */
 
 .features-home .col-md-4 h4 {
   margin-top: 32px;
 }
 
-/* line 110, ../scss/_home.scss */
+/* line 111, ../scss/_home.scss */
 
 .features-home .col-md-4 p {
   max-width: 277px;
   margin: 0 auto 48px;
 }
 
-/* line 115, ../scss/_home.scss */
+/* line 116, ../scss/_home.scss */
 
 .features-home .button {
   margin: 0 auto;
 }
 
 @media (min-width: 800px) {
-  /* line 129, ../scss/_home.scss */
+  /* line 130, ../scss/_home.scss */
 
   .gallery-home {
     padding-left: 0;
@@ -3952,7 +3958,7 @@ h4 {
   }
 }
 
-/* line 134, ../scss/_home.scss */
+/* line 135, ../scss/_home.scss */
 
 .about-home {
   background: url(../images/home-about-bg.jpg) no-repeat top;
@@ -3960,13 +3966,13 @@ h4 {
   color: white;
 }
 
-/* line 137, ../scss/_home.scss */
+/* line 138, ../scss/_home.scss */
 
 .about-home h4 {
   margin-bottom: 32px;
 }
 
-/* line 140, ../scss/_home.scss */
+/* line 141, ../scss/_home.scss */
 
 .about-home p {
   max-width: 943px;
@@ -3974,7 +3980,7 @@ h4 {
 }
 
 @media (min-width: 800px) {
-  /* line 150, ../scss/_home.scss */
+  /* line 151, ../scss/_home.scss */
 
   .about-home .container {
     padding-left: 0;
