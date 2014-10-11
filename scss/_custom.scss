@@ -78,11 +78,16 @@ $standard-spacing: 48px;
 	background:$almost-black;
 	@extend %font-smoothing-off;
 	color:white;
-	a {
+	a,
+	.dropdown-toggle {
+		@include transition-property(color);
+		@include transition-duration(0.28s);
+		@include transition-timing-function(ease-out);
 		color:white;
 		&:focus,
 		&:hover {
-			color:white;
+			text-decoration:none;
+			color:$brown;
 		}
 	}
 	.site-menu .dropdown-menu {
@@ -94,12 +99,17 @@ $standard-spacing: 48px;
 	pointer-events:none;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
 img {
 	max-width: 100%;
 }
 
 hr {
 	border-color:$gray;
+	margin: 0;
 }
 
 .dark-bg {
@@ -114,6 +124,9 @@ hr {
 }
 
 .button {
+	@include transition-property(background,color);
+	@include transition-duration(0.28s);
+	@include transition-timing-function(ease-out);
 	display:inline-block;
 	padding:0 28px;
 	border:1px solid;
@@ -123,8 +136,10 @@ hr {
 	font-size:14px;
 	text-transform:uppercase;
 	font-weight:bold;
-	.dark-bg & {
+	.dark-bg &,
+	&:hover {
 		color:white;
+		background:black;
 	}
 }
 

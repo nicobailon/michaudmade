@@ -2,6 +2,11 @@
 
 .contact {
 	@extend %section-vertical-padding;
+	overflow:auto;
+	h4 {
+		margin-top:0;
+		margin-bottom: $standard-spacing;
+	}
 }
 
 form {
@@ -15,6 +20,9 @@ form {
 		padding:0 12px;
 		margin-bottom:32px;
 		font-weight: 300;
+		&:focus {
+			outline: 2px solid black;
+		}
 	}
 	input[type="text"],
 	input[type="email"] {

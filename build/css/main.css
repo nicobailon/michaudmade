@@ -3324,27 +3324,31 @@ footer a:hover {
   color: white;
 }
 
-/* line 90, ../scss/_custom.scss */
+/* line 88, ../scss/_custom.scss */
+
+/* line 93, ../scss/_custom.scss */
+
+/* line 97, ../scss/_custom.scss */
 
 img {
   max-width: 100%;
 }
 
-/* line 94, ../scss/_custom.scss */
+/* line 101, ../scss/_custom.scss */
 
 hr {
   border-color: #999999;
 }
 
-/* line 100, ../scss/_custom.scss */
+/* line 107, ../scss/_custom.scss */
 
-/* line 105, ../scss/_custom.scss */
+/* line 112, ../scss/_custom.scss */
 
 .show {
   opacity: 1 !important;
 }
 
-/* line 109, ../scss/_custom.scss */
+/* line 116, ../scss/_custom.scss */
 
 .button {
   display: inline-block;
@@ -3358,15 +3362,15 @@ hr {
   font-weight: bold;
 }
 
-/* line 119, ../scss/_custom.scss */
+/* line 126, ../scss/_custom.scss */
 
-/* line 124, ../scss/_custom.scss */
+/* line 131, ../scss/_custom.scss */
 
 .wrapper {
   padding: 0;
 }
 
-/* line 128, ../scss/_custom.scss */
+/* line 135, ../scss/_custom.scss */
 
 .container {
   max-width: 1280px;
@@ -3374,7 +3378,7 @@ hr {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
-  /* line 140, ../scss/_custom.scss */
+  /* line 147, ../scss/_custom.scss */
 
   .container {
     -webkit-font-smoothing: antialiased;
@@ -3382,39 +3386,39 @@ hr {
   }
 }
 
-/* line 145, ../scss/_custom.scss */
+/* line 152, ../scss/_custom.scss */
 
 h1,
 h2 {
   font-family: "Abril Fatface", cursive;
 }
 
-/* line 147, ../scss/_custom.scss */
+/* line 154, ../scss/_custom.scss */
 
 h1 span {
   color: #999999;
 }
 
-/* line 151, ../scss/_custom.scss */
+/* line 158, ../scss/_custom.scss */
 
 h1 {
   font-size: 52px;
   line-height: 58px;
 }
 
-/* line 155, ../scss/_custom.scss */
+/* line 162, ../scss/_custom.scss */
 
 h2 {
   font-size: 36px;
 }
 
-/* line 158, ../scss/_custom.scss */
+/* line 165, ../scss/_custom.scss */
 
 h3 {
   font-size: 24px;
 }
 
-/* line 161, ../scss/_custom.scss */
+/* line 168, ../scss/_custom.scss */
 
 h4 {
   font-weight: bold;
@@ -3472,7 +3476,13 @@ h4 {
   background: url(../images/nav-icon-instagram.png) no-repeat center;
 }
 
-/* line 37, ../scss/_header.scss */
+/* line 41, ../scss/_header.scss */
+
+/* line 46, ../scss/_header.scss */
+
+/* line 59, ../scss/_header.scss */
+
+/* line 67, ../scss/_header.scss */
 
 .site-logo {
   font-size: 24px;
@@ -3481,7 +3491,7 @@ h4 {
   text-transform: uppercase;
 }
 
-/* line 47, ../scss/_header.scss */
+/* line 77, ../scss/_header.scss */
 
 .site-menu a,
 .site-menu .dropdown {
@@ -3490,7 +3500,7 @@ h4 {
   vertical-align: middle;
 }
 
-/* line 51, ../scss/_header.scss */
+/* line 81, ../scss/_header.scss */
 
 .site-menu a.border-left:before {
   content: url(../images/nav-vertical-divider.png);
@@ -3500,7 +3510,7 @@ h4 {
   right: 17px;
 }
 
-/* line 59, ../scss/_header.scss */
+/* line 89, ../scss/_header.scss */
 
 .site-menu .button {
   min-width: inherit;
@@ -3508,7 +3518,7 @@ h4 {
   padding: 0 20px;
 }
 
-/* line 64, ../scss/_header.scss */
+/* line 94, ../scss/_header.scss */
 
 .site-menu .dropdown-menu {
   -webkit-border-radius: 0;
@@ -3516,10 +3526,10 @@ h4 {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
+  -webkit-transition-property: opacity, background;
+  -moz-transition-property: opacity, background;
+  -o-transition-property: opacity, background;
+  transition-property: opacity, background;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
@@ -3538,41 +3548,41 @@ h4 {
   opacity: 0;
 }
 
-/* line 77, ../scss/_header.scss */
+/* line 107, ../scss/_header.scss */
 
 .site-menu .dropdown-menu a {
   padding: 10px 24px;
   color: white;
 }
 
-/* line 81, ../scss/_header.scss */
+/* line 111, ../scss/_header.scss */
 
-/* line 86, ../scss/_header.scss */
+/* line 116, ../scss/_header.scss */
 
 .site-menu .dropdown-menu:not(.show) a {
   pointer-events: none;
 }
 
 @media (min-width: 992px) {
-  /* line 95, ../scss/_header.scss */
+  /* line 125, ../scss/_header.scss */
 
   .site-menu {
     text-align: right;
   }
 
-  /* line 97, ../scss/_header.scss */
+  /* line 127, ../scss/_header.scss */
 
   .site-menu .social-icon {
     margin-left: 15px;
   }
 
-  /* line 100, ../scss/_header.scss */
+  /* line 130, ../scss/_header.scss */
 
   .site-menu .button {
     margin: auto 15px;
   }
 
-  /* line 102, ../scss/_header.scss */
+  /* line 132, ../scss/_header.scss */
 
   .site-menu .button + .social-icon {
     margin-left: 72px;
@@ -3580,25 +3590,25 @@ h4 {
 }
 
 @media (max-width: 480px) {
-  /* line 110, ../scss/_header.scss */
+  /* line 140, ../scss/_header.scss */
 
   .site-menu {
     font-size: 13px;
   }
 
-  /* line 112, ../scss/_header.scss */
+  /* line 142, ../scss/_header.scss */
 
   .site-menu a {
     padding: 0 8px;
   }
 
-  /* line 114, ../scss/_header.scss */
+  /* line 144, ../scss/_header.scss */
 
   .site-menu a.border-left:before {
     right: 10px;
   }
 
-  /* line 118, ../scss/_header.scss */
+  /* line 148, ../scss/_header.scss */
 
   .site-menu .button {
     font-size: 11px;
@@ -3606,21 +3616,21 @@ h4 {
 }
 
 @media (max-width: 992px) {
-  /* line 125, ../scss/_header.scss */
+  /* line 155, ../scss/_header.scss */
 
   .site-menu {
     line-height: 48px;
   }
 }
 
-/* line 130, ../scss/_header.scss */
+/* line 160, ../scss/_header.scss */
 
 .page-banner {
   position: relative;
   text-align: center;
 }
 
-/* line 135, ../scss/_header.scss */
+/* line 165, ../scss/_header.scss */
 
 .page-banner h1 {
   max-width: 52%;
@@ -3630,7 +3640,7 @@ h4 {
 }
 
 @media (min-width: 800px) {
-  /* line 145, ../scss/_header.scss */
+  /* line 175, ../scss/_header.scss */
 
   .header-menu {
     line-height: 100px;
@@ -3638,20 +3648,20 @@ h4 {
 }
 
 @media (min-width: 992px) {
-  /* line 151, ../scss/_header.scss */
+  /* line 181, ../scss/_header.scss */
 
   .site-logo {
     line-height: 100px;
     text-align: left;
   }
 
-  /* line 155, ../scss/_header.scss */
+  /* line 185, ../scss/_header.scss */
 
   .page-banner {
     height: 700px;
   }
 
-  /* line 157, ../scss/_header.scss */
+  /* line 187, ../scss/_header.scss */
 
   .page-banner h1 {
     max-width: 800px;
@@ -3659,14 +3669,14 @@ h4 {
 }
 
 @media (max-width: 940px) {
-  /* line 164, ../scss/_header.scss */
+  /* line 194, ../scss/_header.scss */
 
   .page-banner {
     padding-top: 64px;
     margin-top: 0;
   }
 
-  /* line 167, ../scss/_header.scss */
+  /* line 197, ../scss/_header.scss */
 
   .page-banner h1 {
     font-size: 36px;
@@ -3675,7 +3685,7 @@ h4 {
 }
 
 @media (max-width: 800px) {
-  /* line 175, ../scss/_header.scss */
+  /* line 205, ../scss/_header.scss */
 
   .header-menu {
     padding-bottom: 12px;
@@ -3683,7 +3693,7 @@ h4 {
 }
 
 @media (max-width: 992px) {
-  /* line 182, ../scss/_header.scss */
+  /* line 212, ../scss/_header.scss */
 
   .page-banner h1 {
     padding-top: 64px;
@@ -3691,7 +3701,7 @@ h4 {
 }
 
 @media (max-width: 624px) {
-  /* line 190, ../scss/_header.scss */
+  /* line 220, ../scss/_header.scss */
 
   .page-banner h1 {
     font-size: 28px;
@@ -3700,7 +3710,7 @@ h4 {
 }
 
 @media (max-width: 480px) {
-  /* line 199, ../scss/_header.scss */
+  /* line 229, ../scss/_header.scss */
 
   .page-banner h1 {
     padding-top: 48px;
@@ -3708,7 +3718,7 @@ h4 {
     line-height: 28px;
   }
 
-  /* line 203, ../scss/_header.scss */
+  /* line 233, ../scss/_header.scss */
 
   .page-banner h1:after {
     font-size: 12px;
