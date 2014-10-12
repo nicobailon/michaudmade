@@ -7,7 +7,6 @@
 	position: fixed;
 	top:0;
 	min-height:$header-height;
-	line-height:58px;
 	width: 100%;
 	z-index: 2;
 	color:white;
@@ -17,19 +16,8 @@
   .container {
   	@extend %no-horizontal-padding;
   }
-	.social-icon {
-		display:inline-block;
-		height:23px;
-		width:23px;
-		overflow: hidden;
-		text-indent:-9999px;
-		
-		&.facebook-link {
-			background:url(../images/nav-icon-facebook.png) no-repeat center;
-		}
-		&.instagram-link {
-			background:url(../images/nav-icon-instagram.png) no-repeat center;
-		}
+	.social-icon svg {
+		vertical-align: middle;
 	}
 }
 
@@ -38,54 +26,24 @@ $transparentshadow: rgba(black, 0.3);
 	box-shadow:0px 6px 6px $transparentshadow;
 }
 
-// Current page nav links disabled/highlighted
-// TO DO: add Gallery Page
-body {
-	&.home {
-		// home
-		.site-logo a {
-			@extend %disable-link;
-			font-weight:bold;
-		}
-	}
-	&.single-models {
-		font-weight:bold;
-		// OO-R
-		&.postid-30 {
-
-		}
-		// OM-R
-		&.postid-31 {
-
-		}
-	}
-	&.page-id-98 {
-		// Features & Specs
-		a[href*="features"] {
-			@extend %disable-link;
-			font-weight:bold;
-		}
-	}
-}
-
-
 .site-logo {
 	font-size:24px;
 	margin:0;
 	font-weight:bold;
 	text-transform:uppercase;
+	img {
+		vertical-align: 2px;
+	}
 }
-
-
 
 .site-menu {
 	a,.dropdown {
-		@include transition-property(color);
+		@include transition-property(color,background);
 	  @include transition-duration(0.3s);
 	  @include transition-timing-function(ease-in);
 		display: inline-block;
 		padding:0 15px;
-		vertical-align: middle;
+		height: 40px;
 		&.border-left:before {
 			content:url(../images/nav-vertical-divider.png);
 			border-left: 1px solid #ccc;
@@ -127,16 +85,32 @@ body {
 		pointer-events:none;
 		a {
 			padding: 10px 24px;
+		}
+		a {
 			color:white;
 			&:hover,
 			&:focus {
 				background:inherit;
-				color:$brown;
+				color:$brown !important;
 			}
 		}
 		.dark-bg & {
 			// when header bg is dark, drop down menu bg should also be dark
 			background:black;
+		}
+	}
+	.icon-fill {
+		@include transition-property(fill);
+	  @include transition-duration(0.2s);
+	  @include transition-timing-function(ease-in);
+		fill:#ddd;
+		&:hover,
+		&:focus {
+			background:inherit;
+			fill:$brown;
+			.dark-bg & {
+				fill:#ddd;
+			}
 		}
 	}
 }
@@ -156,7 +130,7 @@ body {
 		.button {
 			margin:auto 15px;
 			& + .social-icon {
-				margin-left:$standard-spacing*1.5;
+				margin-left:$standard-spacing*1.25;
 			}
 		}
 	}
@@ -186,7 +160,7 @@ body {
   // Fine Handcrafted Acoustic Steel String Guitars
 	h1 {
 		@extend %vertical-align;
-		max-width: 52%;
+		max-width: 74%;
 		padding-top:$header-height/2;
 		padding-bottom:12px;
 		margin: 0 auto;
@@ -202,7 +176,7 @@ body {
 
 
 @media (min-width: 800px) {
-	.header-menu {
+	.site-menu {
 		line-height:$header-height;
 	}
 }
@@ -222,7 +196,6 @@ body {
 
 @media (max-width: 940px) {
 	.page-banner {
-		padding-top:64px;
 		margin-top:0;
 		h1 {
 			font-size:36px;	
@@ -237,7 +210,7 @@ body {
 	}
 }
 
-@media (max-width: 992px) {
+@media (min-width: 767px) and (max-width: 992px) {
 	.page-banner {
 		h1 {
 			padding-top: 64px;
@@ -254,10 +227,15 @@ body {
 	}
 }
 
+@media (max-width: 400px) {
+	.page-banner h1 {
+		padding-top:80px;
+	}
+}
+
 @media (max-width: 480px) {
 	.page-banner {
 		h1 {
-			padding-top:48px;
 			font-size: 24px;
 			line-height: 28px;
 			&:after {
