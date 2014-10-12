@@ -12,6 +12,9 @@
 	<link rel="stylesheet" href="http://nicobailon.com/michaudmade/css/main.min.css">
 	<!-- NOTE: remove before launching! -->
 	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	<!-- Inlining styling that gets removed by Uncss in build script -->
+	<style>.page-banner.scrolled h1:before, .page-banner.scrolled h1:after {opacity:0;} .dark-bg .site-menu .dropdown-menu{background:#141414;} 
+.dark-bg .button:hover, .dark-bg .button:active, .dark-bg .button:focus { color:black; background:white; }</style>
 </head>
 <body>
 	<div class="wrapper container-fluid">
@@ -59,7 +62,7 @@
 
 	<div class="models-home container">
 		<h4>Models</h4>
-		<div class="col-md-6">
+		<div class="col-xs-12 col-sm-6 col-md-6">
 			<img class="col-md-4 guitar" src="images/home-model-1.jpg">
 			<div class="col-md-8">
 				<h2>OO-R</h2>
@@ -69,7 +72,7 @@
 				<!-- /build -->
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div class="col-xs-12 col-sm-6 col-md-6">
 			<img class="col-md-4 guitar" src="images/home-model-2.jpg">
 			<div class="col-md-8">
 				<h2>OM-R</h2>
@@ -156,8 +159,7 @@
             </div>
         </footer>
     </div>
-    <script src="http://nicobailon.com/michaudmade/js/libs/jquery-2.1.1.min.js"></script>
-    <!-- NOTE: change to main.min.js before deploying! -->
+    <script src="http://nicobailon.com/michaudmade/js/jquery-2.1.1.min.js"></script>
     <script src="http://nicobailon.com/michaudmade/js/main.min.js"></script>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

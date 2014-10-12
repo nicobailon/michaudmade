@@ -8434,67 +8434,86 @@ body.page-id-98 a[href*="features"] {
   letter-spacing: 3px;
 }
 
+/* line 185, ../scss/_header.scss */
+.page-banner.scrolled h1:before,
+.page-banner.scrolled h1:after {
+  opacity: 0;
+}
+
+/* line 188, ../scss/_header.scss */
+.dark-bg .site-menu .dropdown-menu {
+  background: #141414;
+}
+
+/* line 193, ../scss/_header.scss */
+.dark-bg .button:hover,
+.dark-bg .button:active,
+.dark-bg .button:focus {
+  color: black;
+  background: white;
+}
+
 @media (min-width: 800px) {
-  /* line 184, ../scss/_header.scss */
+  /* line 199, ../scss/_header.scss */
   .header-menu {
     line-height: 100px;
   }
 }
 @media (min-width: 992px) {
-  /* line 190, ../scss/_header.scss */
+  /* line 205, ../scss/_header.scss */
   .site-logo {
     line-height: 100px;
     text-align: left;
   }
 
-  /* line 194, ../scss/_header.scss */
+  /* line 209, ../scss/_header.scss */
   .page-banner {
     height: 700px;
   }
-  /* line 196, ../scss/_header.scss */
+  /* line 211, ../scss/_header.scss */
   .page-banner h1 {
     max-width: 800px;
   }
 }
 @media (max-width: 940px) {
-  /* line 203, ../scss/_header.scss */
+  /* line 218, ../scss/_header.scss */
   .page-banner {
     padding-top: 64px;
     margin-top: 0;
   }
-  /* line 206, ../scss/_header.scss */
+  /* line 221, ../scss/_header.scss */
   .page-banner h1 {
     font-size: 36px;
     line-height: 40px;
   }
 }
 @media (max-width: 800px) {
-  /* line 214, ../scss/_header.scss */
+  /* line 229, ../scss/_header.scss */
   .header-menu {
     padding-bottom: 12px;
   }
 }
 @media (max-width: 992px) {
-  /* line 221, ../scss/_header.scss */
+  /* line 236, ../scss/_header.scss */
   .page-banner h1 {
     padding-top: 64px;
   }
 }
 @media (max-width: 624px) {
-  /* line 229, ../scss/_header.scss */
+  /* line 244, ../scss/_header.scss */
   .page-banner h1 {
     font-size: 28px;
     line-height: 32px;
   }
 }
 @media (max-width: 480px) {
-  /* line 238, ../scss/_header.scss */
+  /* line 253, ../scss/_header.scss */
   .page-banner h1 {
     padding-top: 48px;
     font-size: 24px;
     line-height: 28px;
   }
-  /* line 242, ../scss/_header.scss */
+  /* line 257, ../scss/_header.scss */
   .page-banner h1:after {
     font-size: 12px;
   }
@@ -8636,9 +8655,9 @@ body.page-id-98 a[href*="features"] {
   margin-bottom: 32px;
 }
 /* line 141, ../scss/_home.scss */
-.about-home p {
+.about-home .container p {
   max-width: 943px;
-  margin: 0 auto 12px;
+  margin: 0 auto;
 }
 
 @media (min-width: 800px) {

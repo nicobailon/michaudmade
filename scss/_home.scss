@@ -138,9 +138,9 @@
 	h4 {
 		margin-bottom:$standard-spacing/1.5;
 	}
-	p {
+	.container p {
 		max-width: 943px;
-		margin: 0 auto 12px;
+		margin: 0 auto;
 	}
 	background:url(../images/home-about-bg.jpg) no-repeat top;
 	background-size: cover;

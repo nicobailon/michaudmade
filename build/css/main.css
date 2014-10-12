@@ -3729,8 +3729,21 @@ h4 {
   letter-spacing: 3px;
 }
 
+/* line 185, ../scss/_header.scss */
+
+/* line 188, ../scss/_header.scss */
+
+/* line 193, ../scss/_header.scss */
+
+.dark-bg .button:hover,
+.dark-bg .button:active,
+.dark-bg .button:focus {
+  color: black;
+  background: white;
+}
+
 @media (min-width: 800px) {
-  /* line 184, ../scss/_header.scss */
+  /* line 199, ../scss/_header.scss */
 
   .header-menu {
     line-height: 100px;
@@ -3738,20 +3751,20 @@ h4 {
 }
 
 @media (min-width: 992px) {
-  /* line 190, ../scss/_header.scss */
+  /* line 205, ../scss/_header.scss */
 
   .site-logo {
     line-height: 100px;
     text-align: left;
   }
 
-  /* line 194, ../scss/_header.scss */
+  /* line 209, ../scss/_header.scss */
 
   .page-banner {
     height: 700px;
   }
 
-  /* line 196, ../scss/_header.scss */
+  /* line 211, ../scss/_header.scss */
 
   .page-banner h1 {
     max-width: 800px;
@@ -3759,14 +3772,14 @@ h4 {
 }
 
 @media (max-width: 940px) {
-  /* line 203, ../scss/_header.scss */
+  /* line 218, ../scss/_header.scss */
 
   .page-banner {
     padding-top: 64px;
     margin-top: 0;
   }
 
-  /* line 206, ../scss/_header.scss */
+  /* line 221, ../scss/_header.scss */
 
   .page-banner h1 {
     font-size: 36px;
@@ -3775,7 +3788,7 @@ h4 {
 }
 
 @media (max-width: 800px) {
-  /* line 214, ../scss/_header.scss */
+  /* line 229, ../scss/_header.scss */
 
   .header-menu {
     padding-bottom: 12px;
@@ -3783,7 +3796,7 @@ h4 {
 }
 
 @media (max-width: 992px) {
-  /* line 221, ../scss/_header.scss */
+  /* line 236, ../scss/_header.scss */
 
   .page-banner h1 {
     padding-top: 64px;
@@ -3791,7 +3804,7 @@ h4 {
 }
 
 @media (max-width: 624px) {
-  /* line 229, ../scss/_header.scss */
+  /* line 244, ../scss/_header.scss */
 
   .page-banner h1 {
     font-size: 28px;
@@ -3800,7 +3813,7 @@ h4 {
 }
 
 @media (max-width: 480px) {
-  /* line 238, ../scss/_header.scss */
+  /* line 253, ../scss/_header.scss */
 
   .page-banner h1 {
     padding-top: 48px;
@@ -3808,7 +3821,7 @@ h4 {
     line-height: 28px;
   }
 
-  /* line 242, ../scss/_header.scss */
+  /* line 257, ../scss/_header.scss */
 
   .page-banner h1:after {
     font-size: 12px;
@@ -3985,9 +3998,9 @@ h4 {
 
 /* line 141, ../scss/_home.scss */
 
-.about-home p {
+.about-home .container p {
   max-width: 943px;
-  margin: 0 auto 12px;
+  margin: 0 auto;
 }
 
 @media (min-width: 800px) {

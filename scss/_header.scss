@@ -180,6 +180,21 @@ body {
 	}
 }
 
+// These styles may get removed by Uncss during build so I have inlined them as well
+.page-banner.scrolled h1:before,
+.page-banner.scrolled h1:after {
+	opacity:0;
+} 
+.dark-bg .site-menu .dropdown-menu {
+	background:#141414;
+}
+.dark-bg .button:hover, 
+.dark-bg .button:active,
+.dark-bg .button:focus {
+	color:black; background:white;
+}
+
+
 @media (min-width: 800px) {
 	.header-menu {
 		line-height:$header-height;
