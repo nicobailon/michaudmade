@@ -44,8 +44,13 @@ $(function() {
 
 // Features and Specs Hide/Show
 $(function() {
-    $('.feature-item').click(function(){
-        $(this).find('.box-overlay').toggleClass('show');
+    var featureitem = $('.feature-item');
+    var boxoverlay = $('.box-overlay');
+    $(featureitem).click(function(){
+        $(boxoverlay).each(function() {
+          $( this ).removeClass( 'show' );
+        });
+        $(this).find(boxoverlay).toggleClass('show');
     });
 });
 
