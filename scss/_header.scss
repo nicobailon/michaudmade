@@ -94,10 +94,11 @@ body {
 			right: 17px;
 			opacity: 0.5;
 		}
-		&:hover {
-			background: inherit;
-			color:$brown;
-		}
+	}
+	a:hover,
+	.dropdown.show .dropdown-toggle {
+		background: inherit;
+		color:$brown;
 	}
 	.button {
 		min-width: inherit;
