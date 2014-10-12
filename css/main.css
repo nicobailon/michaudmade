@@ -8879,18 +8879,31 @@ body.page-id-98 a[href*="features"] {
 form {
   font-size: 18px;
   line-height: 2;
-  border-color: #999;
 }
-/* line 18, ../scss/_footer.scss */
+/* line 17, ../scss/_footer.scss */
 form input[type="text"],
 form input[type="email"],
 form textarea {
+  -webkit-appearance: none;
+  border: 1px solid #999;
+  -webkit-transition-property: border-color;
+  -moz-transition-property: border-color;
+  -o-transition-property: border-color;
+  transition-property: border-color;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
   width: 100%;
   padding: 0 12px;
   margin-bottom: 32px;
   font-weight: 300;
 }
-/* line 25, ../scss/_footer.scss */
+/* line 29, ../scss/_footer.scss */
 form input[type="text"]:focus, form input[type="text"]:active, form input[type="text"]:hover,
 form input[type="email"]:focus,
 form input[type="email"]:active,
@@ -8898,30 +8911,31 @@ form input[type="email"]:hover,
 form textarea:focus,
 form textarea:active,
 form textarea:hover {
-  outline: 2px solid black;
+  border-color: #a44b26;
+  outline: none;
 }
-/* line 30, ../scss/_footer.scss */
+/* line 35, ../scss/_footer.scss */
 form input[type="text"],
 form input[type="email"] {
   display: block;
   height: 45px;
   line-height: 45px;
 }
-/* line 35, ../scss/_footer.scss */
+/* line 40, ../scss/_footer.scss */
 form textarea {
   height: 11em;
 }
-/* line 38, ../scss/_footer.scss */
+/* line 43, ../scss/_footer.scss */
 form input[type="submit"] {
   background: none;
 }
 
-/* line 45, ../scss/_footer.scss */
+/* line 50, ../scss/_footer.scss */
 footer {
   padding-top: 32px;
   padding-bottom: 120px;
 }
-/* line 49, ../scss/_footer.scss */
+/* line 54, ../scss/_footer.scss */
 footer a {
   display: inline-block;
   max-width: 50%;

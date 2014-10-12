@@ -12,10 +12,14 @@
 form {
 	font-size:18px;
 	line-height:2;
-	border-color:#999;
 	input[type="text"],
 	input[type="email"],
 	textarea {
+		-webkit-appearance: none;
+		border:1px solid #999;
+		@include transition-property(border-color);
+	  @include transition-duration(0.5s);
+	  @include transition-timing-function(ease-in);
 		width: 100%;
 		padding:0 12px;
 		margin-bottom:32px;
@@ -23,7 +27,8 @@ form {
 		&:focus,
 		&:active,
 		&:hover {
-			outline: 2px solid black;
+			border-color: $brown;
+			outline: none;
 		}
 	}
 	input[type="text"],
