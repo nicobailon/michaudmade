@@ -2,15 +2,15 @@
 
 .intro-model {
 	height:400px;
-	background:url(../images/oo-r-header.jpg) no-repeat top;
-	background-size: 100% auto;
-	background-size: cover;
 	color:white;
 	// &.oo-r {
 	// 	background-image:url(../images/oo-r-header.jpg);
 	// }
 	&.om-r {
-		background-image:url(../images/om-r-header.jpg);
+		background:url(../images/om-r-header.jpg) no-repeat top/cover;
+	}
+	&.oo-r {
+		background:url(../images/oo-r-header.jpg) no-repeat top/cover;
 	}
 }
 
