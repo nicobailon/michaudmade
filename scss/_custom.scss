@@ -135,7 +135,7 @@ hr {
 
 .button {
 	@include transition-property(background,color);
-	@include transition-duration(0.4s);
+	@include transition-duration(0.16s);
 	@include transition-timing-function(ease-in-out);
 	display:inline-block;
 	padding:0 28px;
