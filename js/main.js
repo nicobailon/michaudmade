@@ -19,22 +19,22 @@ $(function() {
 $(function() {
     var dropdowntoggle = document.getElementById("dropdownModels");
     var dropdownmenu = $(".dropdown-menu");
-    $(dropdowntoggle).css({
-       overflow : 'hidden'
-    });
+    var dropdown = $(".dropdown");
     $(dropdowntoggle).hover(
         function() {
-            $(dropdowntoggle).css({
-               overflow : 'inherit'
-            });
-            $(dropdownmenu).addClass("show");
+            $(dropdown).addClass("show-menu");
         }, function() {
             setTimeout(function() {
-                $(dropdownmenu).removeClass("show");
-                $(dropdowntoggle).css({
-                   height : '100px',
-                   overflow : 'hidden'
-                });
+                $(dropdown).removeClass("show-menu");
+            }, 1500);
+        }
+    );
+    $(dropdownmenu).hover(
+        function() {
+            $(dropdown).addClass("show-dropdown");
+        }, function() {
+            setTimeout(function() {
+                $(dropdown).removeClass("show-dropdown");
             }, 1000);
         }
     );

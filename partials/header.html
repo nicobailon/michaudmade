@@ -12,8 +12,7 @@
 	<!-- NOTE: remove before launching! -->
 	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 	<!-- Inlining styling that gets removed by Uncss in build script -->
-	<style>.page-banner.scrolled h1:before, .page-banner.scrolled h1:after {opacity:0;} .dark-bg .site-menu .dropdown-menu{background:#141414;} 
-.dark-bg .button:hover, .dark-bg .button:active, .dark-bg .button:focus { color:black; background:white; }</style>
+	<style>.page-banner.scrolled h1:before, .page-banner.scrolled h1:after {opacity:0;}.dark-bg .site-menu .dropdown-menu{background:#141414;} .dropdown.show-menu .dropdown-menu,.dropdown.show-dropdown .dropdown-menu {opacity: 1;pointer-events:auto;}</style>
 </head>
 <body>
 	<div class="wrapper container-fluid">
@@ -31,11 +30,8 @@
 				</h1>
 
 				<nav class="site-menu col-md-9 col-xs-12 pull-right">
-					<div class="dropdown" id="dropdownModels">
-						<div class="dropdown-toggle" data-toggle="dropdown">
-					    	Models
-					    	<span class="caret"></span>
-						</div>
+					<div class="dropdown">
+						<div id="dropdownModels" class="dropdown-toggle" data-toggle="dropdown">Models<span class="caret"></span></div>
 						<ul class="dropdown-menu">
 							<li role="presentation">
 								<!-- build:[href] http://nicobailon.com/michaudmade/models/ -->

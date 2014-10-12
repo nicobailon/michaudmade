@@ -167,6 +167,15 @@ hr {
 	}
 }
 
+.dark-bg .site-menu .dropdown-menu {
+	background:$almost-black;
+}
+.dark-bg .button:hover, 
+.dark-bg .button:active,
+.dark-bg .button:focus {
+	color:black; background:white;
+}
+
 .wrapper {
 	padding:0;
 }

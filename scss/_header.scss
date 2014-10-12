@@ -104,19 +104,26 @@ body {
 		text-align: center;
 		padding:0 20px;
 	}
+	.dropdown-toggle {
+		display: inline;
+		cursor: pointer;
+	}
 	.dropdown-menu {
 		@include border-radius(0);
-		@include transition-property(opacity,background);
+		@include transition-property(all);
 	  @include transition-duration(0.3s);
-	  @include transition-timing-function(ease-in);
+	  @include transition-timing-function(ease-in-out);
 		display: block;
-		top: 70px;
+		top: 57px;
+		padding: 13px 0 0;
 		min-width: inherit;
-		padding: 0;
+		
 		border: 0;
 		box-shadow: none;
 		background: inherit;
 		opacity: 0;
+		overflow: hidden;
+		pointer-events:none;
 		a {
 			padding: 10px 24px;
 			color:white;
@@ -130,13 +137,13 @@ body {
 			// when header bg is dark, drop down menu bg should also be dark
 			background:black;
 		}
-		&:not(.show) {
-			a {
-				// disable links when drop menu is invisible
-				pointer-events: none;
-			}
-		}
 	}
+}
+
+.dropdown.show-menu .dropdown-menu,
+.dropdown.show-dropdown .dropdown-menu {
+	opacity: 1;
+	pointer-events:auto;
 }
 
 @media (min-width: 992px) {
@@ -191,14 +198,6 @@ body {
 .page-banner.scrolled h1:after {
 	opacity:0;
 } 
-.dark-bg .site-menu .dropdown-menu {
-	background:#141414;
-}
-.dark-bg .button:hover, 
-.dark-bg .button:active,
-.dark-bg .button:focus {
-	color:black; background:white;
-}
 
 
 @media (min-width: 800px) {
