@@ -96,6 +96,7 @@
 
 // Homepage: Features & Specs
 .features-home {
+	background:darkbrown url(../images/home-features-bg.jpg);
 	text-align:center;
 	@extend %dark-bg;
 	@extend %section-vertical-padding;
