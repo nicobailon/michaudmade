@@ -98,6 +98,11 @@ a,
 		text-decoration:none;
 		color:$brown;
 	}
+	&:focus {
+		outline: none;
+		background:$brown;
+		color:white;
+	}
 }
 
 %disable-link {

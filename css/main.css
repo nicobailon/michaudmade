@@ -8114,39 +8114,46 @@ a:focus, a:hover, a:active,
   text-decoration: none;
   color: #a44b26;
 }
+/* line 101, ../scss/_custom.scss */
+a:focus,
+.dropdown-toggle:focus {
+  outline: none;
+  background: #a44b26;
+  color: white;
+}
 
-/* line 103, ../scss/_custom.scss */
+/* line 108, ../scss/_custom.scss */
 body.home .site-logo a, body.page-id-98 a[href*="features"] {
   pointer-events: none;
 }
 
-/* line 107, ../scss/_custom.scss */
+/* line 112, ../scss/_custom.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 111, ../scss/_custom.scss */
+/* line 116, ../scss/_custom.scss */
 img {
   max-width: 100%;
 }
 
-/* line 115, ../scss/_custom.scss */
+/* line 120, ../scss/_custom.scss */
 hr {
   border-color: #999999;
   margin: 0;
 }
 
-/* line 122, ../scss/_custom.scss */
+/* line 127, ../scss/_custom.scss */
 .dark-bg hr {
   border-color: #dedede;
 }
 
-/* line 127, ../scss/_custom.scss */
+/* line 132, ../scss/_custom.scss */
 .show {
   opacity: 1 !important;
 }
 
-/* line 131, ../scss/_custom.scss */
+/* line 136, ../scss/_custom.scss */
 .button {
   -webkit-transition-property: background, color;
   -moz-transition-property: background, color;
@@ -8170,66 +8177,66 @@ hr {
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 146, ../scss/_custom.scss */
+/* line 151, ../scss/_custom.scss */
 .site-menu .button:hover, .site-menu .button:active, .site-menu .button:focus {
   background: white;
   color: black;
 }
-/* line 153, ../scss/_custom.scss */
+/* line 158, ../scss/_custom.scss */
 .dark-bg .button, .button:hover, .button:active, .button:focus {
   color: white;
   background: black;
 }
-/* line 159, ../scss/_custom.scss */
+/* line 164, ../scss/_custom.scss */
 .dark-bg .button:hover, .dark-bg .button:active, .dark-bg .button:focus {
   color: black;
   background: white;
 }
 
-/* line 165, ../scss/_custom.scss */
+/* line 170, ../scss/_custom.scss */
 .wrapper {
   padding: 0;
 }
 
-/* line 169, ../scss/_custom.scss */
+/* line 174, ../scss/_custom.scss */
 .container {
   max-width: 1280px;
   text-align: center;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
-  /* line 181, ../scss/_custom.scss */
+  /* line 186, ../scss/_custom.scss */
   .container {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 }
-/* line 186, ../scss/_custom.scss */
+/* line 191, ../scss/_custom.scss */
 h1, h2 {
   font-family: "Abril Fatface", cursive;
 }
-/* line 188, ../scss/_custom.scss */
+/* line 193, ../scss/_custom.scss */
 h1 span, h2 span {
   color: #999999;
 }
 
-/* line 192, ../scss/_custom.scss */
+/* line 197, ../scss/_custom.scss */
 h1 {
   font-size: 52px;
   line-height: 58px;
 }
 
-/* line 196, ../scss/_custom.scss */
+/* line 201, ../scss/_custom.scss */
 h2 {
   font-size: 36px;
 }
 
-/* line 199, ../scss/_custom.scss */
+/* line 204, ../scss/_custom.scss */
 h3 {
   font-size: 24px;
 }
 
-/* line 202, ../scss/_custom.scss */
+/* line 207, ../scss/_custom.scss */
 h4 {
   font-weight: bold;
 }
