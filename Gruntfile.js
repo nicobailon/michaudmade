@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     uglify: {
       build: {
         files: {
-          'build/js/main.min.js': ['js/*.js']
+          'build/js/main.min.js': ['js/main.js']
         }
       }
     },
@@ -147,5 +147,5 @@ module.exports = function(grunt) {
   // Default tasks
   grunt.registerTask('default', ['includes:default','compass']);
   // Build tasks
-  grunt.registerTask('build', ['includes:default','compass','uncss','cssmin','processhtml','includes:build','imagemin','uglify']);
+  grunt.registerTask('build', ['compass','uncss','cssmin','processhtml','includes:build','imagemin','uglify']);
 };
