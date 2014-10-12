@@ -33,6 +33,11 @@
 	}
 }
 
+$transparentshadow: rgba(black, 0.3);
+.header-menu.dark-bg {
+	box-shadow:0px 6px 6px $transparentshadow;
+}
+
 // Current page nav links disabled/highlighted
 // TO DO: add Gallery Page
 body {
