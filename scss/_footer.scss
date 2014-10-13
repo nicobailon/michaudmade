@@ -53,6 +53,14 @@ footer {
 	padding-bottom:$standard-spacing*2.5;
 	a {
 		display: inline-block;
-		max-width:50%;
+	}
+	.copyright-info {
+		max-width: 78%;
+	}
+}
+
+@media (max-width:600px) {
+	footer {
+		font-size: 12px;
 	}
 }
