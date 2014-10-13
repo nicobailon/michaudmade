@@ -22,6 +22,12 @@
 	margin-bottom: $standard-spacing*1.25;
 }
 
+@media (max-width:991px) {
+	.model-detail-grid > div[class*="col"]:nth-last-of-type(n+3) {
+		margin-bottom:$standard-spacing/2;
+	}
+}
+
 .model-description {
 	font-size:20px;
 	line-height:28px;
