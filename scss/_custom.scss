@@ -100,7 +100,7 @@ a,
 	}
 	&:focus {
 		outline: none;
-		background:$brown;
+		background:rgba($brown,0.2);
 		color:white;
 	}
 }
