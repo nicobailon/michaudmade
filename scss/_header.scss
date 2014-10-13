@@ -53,7 +53,7 @@ $transparentshadow: rgba(black, 0.3);
 		@include transition-property(color,background);
 	  @include transition-duration(0.3s);
 	  @include transition-timing-function(ease-in);
-		display: inline-block;
+		display: inline;
 		padding:0 15px;
 		&.border-left:before {
 			content:url(../images/nav-vertical-divider.png);
@@ -70,6 +70,7 @@ $transparentshadow: rgba(black, 0.3);
 		color:$brown;
 	}
 	.button {
+		display: inline-block;
 		min-width: inherit;
 		text-align: center;
 		padding:0 20px;
