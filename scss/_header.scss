@@ -1,24 +1,61 @@
 // Header
 
 .header-menu {
-	@include transition-property(background,color);
-  @include transition-duration(0.4s,0.5s);
-  @include transition-timing-function(ease-out);
-	position: fixed;
+	@include transition-property(all);
+  @include transition-duration(0.24s);
+  @include transition-timing-function(ease-in);
+	
+	position: static;
 	top:0;
 	min-height:$header-height;
 	line-height: $header-height;
 	width: 100%;
 	z-index: 2;
+	background: black;
 	color:white;
 	a {
 		color:white;
 	}
-  .container {
-  	@extend %no-horizontal-padding;
-  }
 	.social-icon svg {
 		vertical-align: middle;
+	}
+}
+
+@media (max-width:641px) {
+	.header-menu .container {
+  	padding-left: 0;
+  	padding-right: 0;
+  }
+}
+
+// Resize banner on mobile
+@media (min-width:415px) and (min-height:737px) {
+	.header-menu {
+		position: absolute;
+		background:none;
+		&.dark-bg {
+			background: black;
+		}
+	}
+	
+}
+@media (min-width:737px) and (min-height:414px) {
+	.header-menu {
+		position: absolute;
+		background:none;
+		&.dark-bg {
+			background: black;
+		}
+	}
+}
+
+// iPhone 6 portrait and taller
+@media (min-width:415px) and (min-height:737px) {
+	.header-menu {
+		position: fixed;
+	}
+	.site-menu .dropdown-menu {
+		padding: 13px 0 0;
 	}
 }
 
@@ -35,9 +72,9 @@
 	}
 }
 
-$transparentshadow: rgba(black, 0.3);
+$transparentshadow: rgba(black, 0.1);
 .header-menu.dark-bg {
-	box-shadow:0px 6px 6px $transparentshadow;
+	box-shadow:0px 8px 0px $transparentshadow;
 }
 
 .site-logo {
@@ -46,6 +83,12 @@ $transparentshadow: rgba(black, 0.3);
 	margin:0;
 	font-weight:bold;
 	text-transform:uppercase;
+	img {
+		vertical-align: -1px;
+	}
+	svg path {
+		fill:white;
+	}
 }
 
 .site-menu {
@@ -85,7 +128,7 @@ $transparentshadow: rgba(black, 0.3);
 	  @include transition-duration(0.3s);
 	  @include transition-timing-function(ease-in-out);
 		display: block;
-		top: 57px;
+		top: 17px;
 		padding: 13px 0 0;
 		min-width: inherit;
 		
@@ -115,7 +158,32 @@ $transparentshadow: rgba(black, 0.3);
 		@include transition-property(fill);
 	  @include transition-duration(0.2s);
 	  @include transition-timing-function(ease-in);
-		fill:#ddd;
+		fill:rgba(white,0.5);
+	}
+}
+
+@media (max-width:407px) {
+	.site-menu .dropdown.show-menu .dropdown-menu {
+		background: black;
+	}
+	.site-menu .dropdown.show-dropdown .dropdown-menu {
+		background: black;
+	}
+}
+
+.dropdown.show-menu .dropdown-menu,
+.dropdown.show-dropdown .dropdown-menu {
+	opacity: 1;
+	pointer-events:auto;
+}
+
+
+
+@media (min-width:641px) {
+	.site-menu {
+		a,.dropdown {
+			display: inline;
+		}
 	}
 }
 
@@ -126,26 +194,22 @@ $transparentshadow: rgba(black, 0.3);
 	background:inherit;
 	fill:$brown;
 	.dark-bg & {
-		fill:#ddd;
+		fill:$brown;
 	}
 }
 
-.dropdown.show-menu .dropdown-menu,
-.dropdown.show-dropdown .dropdown-menu {
-	opacity: 1;
-	pointer-events:auto;
-}
+
 
 @media (min-width: 992px) {
 	.site-menu {
 		text-align:right;
-		.social-icon {
+		.facebook-link {
 			margin-left:15px;
 		}
 		.button {
 			margin:auto 15px;
 			& + .social-icon {
-				margin-left:$standard-spacing*1.25;
+				margin-left:46px;
 			}
 		}
 	}
@@ -171,15 +235,41 @@ $transparentshadow: rgba(black, 0.3);
 	position: relative;
 	border-bottom:1px solid black;
   text-align:center;
+  background-size: 100% auto;
+	background-size: cover;
   background-color:$almost-black;
+  color:white;
   // Fine Handcrafted Acoustic Steel String Guitars
 	h1 {
 		@extend %vertical-align;
 		max-width: 74%;
-		padding-top:$header-height/2;
 		padding-bottom:12px;
 		margin: 0 auto;
 		letter-spacing: 3px;
+		font-size:26px;
+	}
+}
+
+@media (min-width:768px) and (min-height:768px) {
+	.page-banner {
+	 height:100vh;
+	}
+}
+
+
+@media (min-width: 415px) {
+	.page-banner h1 {
+		font-size:29.6666666666667px;
+	}
+}
+@media (max-width: 667px) {
+	.page-banner h1 {
+		font-size: 41.0833333333333px;
+	}
+}
+@media (min-width: 668px) {
+	.page-banner h1 {
+		font-size: inherit;
 	}
 }
 
@@ -205,10 +295,6 @@ $transparentshadow: rgba(black, 0.3);
 @media (max-width: 940px) {
 	.page-banner {
 		margin-top:0;
-		h1 {
-			font-size:36px;	
-			line-height: 40px;
-		}
 	}
 }
 
@@ -218,37 +304,17 @@ $transparentshadow: rgba(black, 0.3);
 	}
 }
 
-@media (min-width: 767px) and (max-width: 992px) {
-	.page-banner {
-		h1 {
-			padding-top: 64px;
-		}
-	}
-}
 
-@media (max-width: 624px) {
-	.page-banner {
-		h1 {
-			font-size: 28px;
-			line-height: 32px;
-		}
-	}
-}
-
-@media (max-width: 400px) {
+@media (min-width: 416px) and (min-height: 416px) and (max-width:766px) {
 	.page-banner h1 {
-		padding-top:80px;
+		padding-top:10%;
 	}
 }
 
 @media (max-width: 480px) {
 	.page-banner {
-		h1 {
-			font-size: 24px;
-			line-height: 28px;
-			&:after {
-				font-size:12px;
-			}
+		h1:after {
+			font-size:12px;
 		}
 	}
 }

@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-	<meta charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400|Abril+Fatface' rel='stylesheet' type='text/css'>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Michaud Made</title>
+	<link rel="shortcut icon" href="favicon.ico" />
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- NOTE: change to main.min.css before deploying! -->
 	<!-- build:[href] http://nicobailon.com/michaudmade/css/main.min.css -->
 	<link rel="stylesheet" href="///Users/nicobailon/Documents/website/css/main.css">
 	<!-- /build -->
 	<!-- NOTE: remove before launching! -->
 	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 	<!-- Inlining styling that gets removed by Uncss in build script -->
-	<style>.page-banner.scrolled h1:before, .page-banner.scrolled h1:after {opacity:0;} .dark-bg .site-menu .dropdown-menu{background:#141414;} 
-.dark-bg .button:hover, .dark-bg .button:active, .dark-bg .button:focus { color:black; background:white; }</style>
+	<style>.page-banner.scrolled h1:before, .page-banner.scrolled h1:after {opacity:0;}.dark-bg .site-menu .dropdown-menu{background:#141414;} .dropdown.show-menu .dropdown-menu,.dropdown.show-dropdown .dropdown-menu {opacity: 1;pointer-events:auto;}</style>
 </head>
 <body>
 	<div class="wrapper container-fluid">
@@ -34,11 +31,8 @@
 				</h1>
 
 				<nav class="site-menu col-md-9 col-xs-12 pull-right">
-					<div class="dropdown" id="dropdownModels">
-						<div class="dropdown-toggle" data-toggle="dropdown">
-					    	Models
-					    	<span class="caret"></span>
-						</div>
+					<div class="dropdown">
+						<div id="dropdownModels" class="dropdown-toggle" data-toggle="dropdown">Models<span class="caret"></span></div>
 						<ul class="dropdown-menu">
 							<li role="presentation">
 								<!-- build:[href] http://nicobailon.com/michaudmade/models/ -->
@@ -56,12 +50,29 @@
 					<a href="///Users/nicobailon/Documents/website/features-and-specs.html" class="border-left">Features &amp; Specs</a>
 					<!-- /build -->
 					<a href="" class="border-left">Gallery</a></li>
-					<a href="" class="button">Ordering</a></li>
+					<a href="michaud-made-orderform.pdf" target="_new" class="button">Ordering</a></li>
 					<a href="" class="social-icon facebook-link">
-						Facebook
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="24px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+						<g>
+							<path class="icon-fill" d="M223.22,71.227c16.066-15.298,38.918-20.465,60.475-21.109c22.799-0.205,45.589-0.081,68.388-0.072
+								c0.09,24.051,0.098,48.111-0.009,72.161c-14.734-0.026-29.478,0.036-44.212-0.026c-9.343-0.582-18.937,6.5-20.635,15.762
+								c-0.224,16.093-0.081,32.195-0.072,48.289c21.61,0.089,43.22-0.027,64.829,0.054c-1.582,23.281-4.47,46.456-7.858,69.541
+								c-19.088,0.179-38.187-0.018-57.274,0.099c-0.17,68.665,0.089,137.33-0.134,205.995c-28.352,0.116-56.721-0.054-85.072,0.08
+								c-0.537-68.674,0.044-137.383-0.295-206.066c-13.832-0.144-27.672,0.099-41.503-0.116c0.053-23.085,0.018-46.169,0.026-69.246
+								c13.822-0.169,27.654,0.036,41.477-0.098c0.42-22.442-0.421-44.91,0.438-67.333C203.175,101.384,209.943,83.493,223.22,71.227z"/>
+						</g>
+						<!-- build:[href] http://nicobailon.com/michaudmade/ -->
+						<image src="images/nav-icon-facebook.png">
+						<!-- /build -->
+						</svg>
 					</a>
-					<a href="" class="social-icon instagram-link">
-						Instagram
+					<a href="http://instagram.com/michaudmade" class="social-icon instagram-link">
+						<svg enable-background="new 0 0 56.693 56.693" height="24px" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693" width="24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path class="icon-fill" d="M43.414,4.831H13c-5.283,0-9.581,4.297-9.581,9.58v10.12v20.295c0,5.283,4.298,9.58,9.581,9.58h30.415  c5.283,0,9.58-4.297,9.58-9.58V24.53v-10.12C52.994,9.127,48.697,4.831,43.414,4.831z M46.162,10.544l1.096-0.004v1.091v7.312  l-8.375,0.027l-0.029-8.402L46.162,10.544z M21.131,24.53c1.588-2.197,4.164-3.638,7.076-3.638s5.488,1.441,7.074,3.638  c1.033,1.434,1.652,3.188,1.652,5.088c0,4.811-3.918,8.725-8.727,8.725c-4.812,0-8.726-3.914-8.726-8.725  C19.481,27.718,20.098,25.964,21.131,24.53z M48.164,44.825c0,2.621-2.131,4.75-4.75,4.75H13c-2.62,0-4.751-2.129-4.751-4.75V24.53  h7.4c-0.639,1.572-0.998,3.289-0.998,5.088c0,7.473,6.08,13.557,13.556,13.557c7.475,0,13.555-6.084,13.555-13.557  c0-1.799-0.361-3.516-1-5.088h7.402V44.825z"/>
+						<!-- build:[href] http://nicobailon.com/michaudmade/ -->
+						<image src="images/nav-icon-facebook.png">
+						<!-- /build -->
+						</svg>
 					</a>
 				</nav>
 			</div>
@@ -130,6 +141,12 @@ Pleasing bass presence and resonance with mids and trebles that are easy to focu
     </div>
     <!-- build:[src] http://nicobailon.com/michaudmade/js/jquery-2.1.1.min.js -->
     <script src="///Users/nicobailon/Documents/website/js/jquery-2.1.1.min.js"></script>
+    <!-- /build -->
+    <!-- build:[src] http://nicobailon.com/michaudmade/js/ -->
+    <script src="///Users/nicobailon/Documents/website/js/flowtype.js"></script>
+    <!-- /build -->
+    <!-- build:[src] http://nicobailon.com/michaudmade/js/ -->
+    <script src="///Users/nicobailon/Documents/website/js/jquery.scrolly.js"></script>
     <!-- /build -->
     <!-- build:[src] http://nicobailon.com/michaudmade/js/main.min.js -->
     <script src="///Users/nicobailon/Documents/website/js/main.js"></script>

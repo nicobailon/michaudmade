@@ -42,31 +42,31 @@ module.exports = function(grunt) {
       }
     },
 
-    uncss: {
-      build: {
-        options: {
-          ignore  : [
-            '.dark-bg',
-            '.scrolled',
-            '.page-home .page-banner.scrolled h1:before',
-            '.page-home .page-banner.scrolled h1:after',
-            '.show'
-          ],
-          // For some reason Uncss is only ignoring the first class specified so we have to apply this hack
-          // Commented out because Uncss was not adding the raw css below, used js instead
-          //raw : '.page-banner.scrolled h1:before, .page-banner.scrolled h1:after {opacity:0;}',
-          stylesheets  : ['css/main.css']
-        },
-        files: {
-          'build/css/main.css': ['*.html','models/*.html']
-        }
-      }
-    },
+    // uncss: {
+    //   build: {
+    //     options: {
+    //       ignore  : [
+    //         '.dark-bg',
+    //         '.scrolled',
+    //         '.page-home .page-banner.scrolled h1:before',
+    //         '.page-home .page-banner.scrolled h1:after',
+    //         '.show'
+    //       ],
+    //       // For some reason Uncss is only ignoring the first class specified so we have to apply this hack
+    //       // Commented out because Uncss was not adding the raw css below, used js instead
+    //       //raw : '.page-banner.scrolled h1:before, .page-banner.scrolled h1:after {opacity:0;}',
+    //       stylesheets  : ['css/main.css']
+    //     },
+    //     files: {
+    //       'build/css/main.css': ['*.html','models/*.html']
+    //     }
+    //   }
+    // },
 
     cssmin: {
       combine: {
         files: {
-          'build/css/main.min.css': ['build/css/main.css']
+          'build/css/main.min.css': ['css/main.css']
         }
       }
     },
@@ -137,7 +137,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-uncss');
+  // grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-includes');
@@ -147,5 +147,5 @@ module.exports = function(grunt) {
   // Default tasks
   grunt.registerTask('default', ['includes:default','compass']);
   // Build tasks
-  grunt.registerTask('build', ['compass','uncss','cssmin','processhtml','includes:build','imagemin','uglify']);
+  grunt.registerTask('build', ['compass','cssmin','processhtml','includes:build','imagemin','uglify']);
 };

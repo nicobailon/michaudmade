@@ -26,7 +26,7 @@ $(function() {
         }, function() {
             setTimeout(function() {
                 $(dropdown).removeClass("show-menu");
-            }, 1500);
+            }, 100);
         }
     );
     $(dropdownmenu).hover(
@@ -35,7 +35,7 @@ $(function() {
         }, function() {
             setTimeout(function() {
                 $(dropdown).removeClass("show-dropdown");
-            }, 1000);
+            }, 100);
         }
     );
 });
@@ -46,9 +46,9 @@ $(function() {
 $(function() {
     var featureitem = $('.feature-item');
     var boxoverlay = $('.box-overlay');
-    $(featureitem).click(function(){
-        $(boxoverlay).each(function() {
-          $( this ).removeClass( 'show' );
+    featureitem.click(function(){
+        boxoverlay.each(function() {
+          $( this ).removeClass('show');
         });
         $(this).find(boxoverlay).toggleClass('show');
     });
@@ -57,5 +57,59 @@ $(function() {
 
 
 // Parallax
-$('.parallax').scrolly({bgParallax: true});
+// Run only on desktop
 
+$(function() {
+    if ((window.innerWidth > 767) && (window.innerHeight > 959))  {
+        $('.parallax').scrolly({bgParallax: true});
+    } else if ((window.innerWidth > 959) && (window.innerHeight > 767))  {
+        $('.parallax').scrolly({bgParallax: true});
+    }
+});
+
+
+
+// Flowtype
+var bannerText = $('.page-banner h1');
+bannerText.flowtype({
+    minimum : 320,
+    maximum : 992,
+    fontRatio : 12,
+    minFont : 24,
+    maxFont : 52
+});
+
+var aboutText = $('.about-text p');
+aboutText.flowtype({
+    minimum : 320,
+    maximum : 992,
+    fontRatio : 34,
+    minFont : 13,
+    maxFont : 20
+});
+
+var boxTitle = $('.box-overlay h3');
+var boxParagraph = $('.box-overlay p');
+boxTitle.flowtype({
+    minimum : 320,
+    maximum : 1024,
+    fontRatio : 15,
+    minFont : 16,
+    maxFont : 24
+});
+boxParagraph.flowtype({
+    minimum : 320,
+    maximum : 1024,
+    fontRatio : 25,
+    minFont : 12,
+    maxFont : 16
+});
+
+var modelDesc = $('.model-description');
+modelDesc.flowtype({
+    minimum : 320,
+    maximum : 1024,
+    fontRatio : 40,
+    minFont : 13,
+    maxFont : 20
+});

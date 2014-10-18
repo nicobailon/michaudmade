@@ -1,11 +1,28 @@
 // Features and Specs
 
 .intro-features-and-specs {
-	height:400px;
-	background:url(../images/features-header.jpg) no-repeat top;
+	// Mobile first background header
+	height: 208px;
 	background-size: 100% auto;
-	background-size: cover;
-	color:white;
+	background:url(../images/features-header-mobile.jpg) no-repeat center/cover;
+}
+
+@media (min-width:415px) and (max-height:767px) {
+	.intro-features-and-specs {
+		height: 400px;
+	}
+}
+@media (min-width:768px) {
+	.intro-features-and-specs {
+	 height:100vh;
+	}
+}
+
+// Change size and bg image on non-mobile devices
+@media (min-width:415px) and (min-height:737px) {
+	.intro-features-and-specs {
+		background:url(../images/features-header.jpg) no-repeat top/cover;
+	}
 }
 
 .features-grid {
@@ -45,19 +62,21 @@
 		max-width: 400px;
 		margin:0 auto;
 	}
-	&.show ~ .guitar-feature-image {
-
-	}
 }
+
+// @-webkit-keyframes fadeIntro {
+//   from   { opacity: 1; }
+//   to { opacity: 0; }
+// }
+
+// .features-grid .box-overlay {
+//   -webkit-animation-name: fadeIntro; -webkit-animation-duration: 0.6s; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: ease-in;;
+// }
 
 // iPad portrait view
 @media (min-width: 768px) and (max-width: 991px) {
 	.box-overlay {
-		p {
-			font-size:12px;
-		}
 		h3 {
-			font-size:24px;
 			margin-bottom:$standard-spacing/4;
 			&:after {
 				padding-top: $standard-spacing/4;
@@ -68,12 +87,6 @@
 
 @media (min-width: 992px) {
 	.box-overlay {
-		p {
-			font-size:inherit;
-		}
-		h3 {
-			font-size:24px;
-		}
 		.close-icon {
 			height:20px;
 			width:20px;
@@ -113,7 +126,6 @@
 @media (min-width: 992px) and (max-width: 1199px) {
 	.page-features-and-specs {
 		.col-md-6 {
-			font-size:14px;
 			.guitar-feature-image {
 				height:100%;
 				width:auto;

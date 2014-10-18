@@ -1,18 +1,36 @@
 
 .page-home .container p {
 	font-size:20px;
-	line-height:30px;
+	line-height:1.5;
 	margin-bottom:24px;
+}
+
+@media (max-width: 568px) {
+	.page-home .container p {
+		font-size:14px;
+	}
+}
+
+@media (min-width: 569px) and (max-width: 667px) {
+	.page-home .container p {
+		font-size:16px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.page-home .container p {
+		font-size:16px;
+	}
 }
 
 .page-home .page-banner {
 	h1 {
 		&:after {
-			content:"Please Scroll";
 			display: block;
 			background:url(../images/home-header-brown-divider.jpg) no-repeat top;
 			font-family: $opensans;
 			font-size:14px;
+			line-height: 3.75;
 			font-weight:300;
 			letter-spacing:0; 
 			margin:36px auto 0;
@@ -20,7 +38,7 @@
 		}
 		// Down arrow
 		&:before {
-			content:url(../images/home-arrow-down.png);
+			
 			display:block;
 			position: absolute;
 			width: 100%;
@@ -35,6 +53,36 @@
 	}
 }
 
+// Show 'Please scroll' only on non-mobile devices
+@media (min-width:1024px) and (min-height:600px) {
+	.page-home .page-banner h1 {
+		&:before {
+			content:url(../images/home-arrow-down.png);
+		}
+		&:after {
+			content:"Please Scroll";
+		}
+	}
+}
+@media (min-width:415px) and (min-height:737px) {
+	.page-home .page-banner h1 {
+		&:before {
+			content:url(../images/home-arrow-down.png);
+		}
+		&:after {
+			content:"Please Scroll";
+		}
+	}
+}
+
+@-moz-document url-prefix() {
+	.page-home .page-banner h1 {
+		&:after {
+			font-family: arial,sans-serif;
+		}
+	}
+}
+
 .page-banner.scrolled {
 	h1:before,
 	h1:after {
@@ -42,16 +90,40 @@
 	}
 }
 
+// Mobile first background header
 .intro-home {
-	height:500px;
-	background:url(../images/home-header.jpg) no-repeat top;
-	background-size: 100% auto;
-	background-size: cover;
-	color:white;
+	height: 260px;
+	background:url(../images/home-header-mobile.jpg) no-repeat center/cover;
+}
+
+// Change size and bg image on non-mobile devices
+@media (min-width:415px) {
+	.intro-home {
+		height:500px;
+	}
+}
+@media (min-width:767px) {
+	.intro-home {
+		height:100vh;
+	}
+}
+@media (min-width:415px) and (min-height:737px) {
+	.intro-home {
+		background-image:url(../images/home-header.jpg);
+	}
+}
+@media (min-width:737px) and (min-height:415px) {
+	.intro-home {
+		background-image:url(../images/home-header.jpg);
+	}
 }
 
 .models-home {
 	@extend %section-vertical-padding;
+	padding-bottom:$standard-spacing*1.25;
+	h4 {
+		margin-bottom:$standard-spacing;
+	}
 	h2 {
 		&:after {
 			content:" ";
@@ -62,9 +134,27 @@
 			background:$brown;
 		}
 	}
-	> .col-md-6 {
-		> .col-md-8 {
-			@extend %standard-spacing-bottom;
+	img.guitar {
+		height:216px;
+	}
+}
+
+@media (max-width:767px){
+	.models-home { 
+		padding-bottom:0;
+		> .col-md-6 > .col-md-8 {
+			margin-bottom: $standard-spacing*1.25;
+		}
+	}
+}
+
+@media (min-width:992px){
+	.models-home {
+		h4 {
+			margin-bottom:inherit;
+		}
+		img.guitar {
+			height:auto;
 		}
 	}
 }
@@ -74,7 +164,7 @@
 		> .col-md-6 {
 			&:first-of-type {
 				padding-left:0;
-				background:url(../images/home-models-vert-line.png) no-repeat 100% 40%;
+				background:url(../images/home-models-vert-line.jpg) no-repeat 100% 40%;
 				.col-md-8 {
 					padding-left: 0;
 					padding-right: 30px;
@@ -96,9 +186,9 @@
 
 // Homepage: Features & Specs
 .features-home {
-	background:darkbrown url(../images/home-features-bg.jpg);
+	background:black url(../images/home-features-bg.jpg);
+	background-size:cover;
 	text-align:center;
-	@extend %dark-bg;
 	@extend %section-vertical-padding;
 	.container > h4 {
 		@extend %standard-spacing-bottom;
@@ -110,7 +200,6 @@
 			margin-top:32px;
 		}
 		p {
-			max-width: 277px;
 			margin: 0 auto $standard-spacing;
 		}
 	}
@@ -133,19 +222,41 @@
 	}
 }
 
-.about-home {
+.about-home-wrap {
 	@extend %section-vertical-padding;
 	@extend %dark-bg;
+	position: relative;
+	overflow:hidden;
 	h4 {
 		margin-bottom:$standard-spacing/1.5;
 	}
-	.container p {
-		max-width: 943px;
+	.container {
+		position: relative;
+		z-index: 1;
+		max-width: 978px;
 		margin: 0 auto;
+		color:white;
 	}
-	background:url(../images/home-about-bg.jpg) no-repeat top;
-	background-size: cover;
-	color:white;
+	.about-text {
+		p {
+			margin: 0 auto 24px;
+		}
+	}
+	.about-home-bg {
+		background: url(../images/home-about-bg.jpg) repeat fixed;
+		background-size: 100% auto;
+		margin: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+}
+@media (max-width: 736px) {
+	.about-text p {
+		max-width: 82%;
+	}
 }
 @media (min-width: 800px) {
 	.about-home {

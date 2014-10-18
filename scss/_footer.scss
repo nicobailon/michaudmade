@@ -35,7 +35,7 @@ form {
 	input[type="email"] {
 		display: block;
 		height:45px;
-		line-height: 45px;
+		line-height: 1;
 	}
 	textarea {
 		height: 11em;
@@ -55,7 +55,7 @@ footer {
 		display: inline-block;
 	}
 	.copyright-info {
-		max-width: 78%;
+		max-width: 74%;
 	}
 }
 

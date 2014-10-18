@@ -1,21 +1,59 @@
 // Model Detail Page
 
 .intro-model {
-	height:400px;
-	color:white;
-	// &.oo-r {
-	// 	background-image:url(../images/oo-r-header.jpg);
-	// }
+	height: 125px;
+	// Mobile first background header
 	&.om-r {
-		background:url(../images/om-r-header.jpg) no-repeat top/cover;
+		background:url(../images/om-r-header-mobile.jpg) no-repeat top center/cover;
 	}
 	&.oo-r {
-		background:url(../images/oo-r-header.jpg) no-repeat top/cover;
+		background:url(../images/oo-r-header-mobile.jpg) no-repeat top center/cover;
 	}
 }
 
+@media (min-width:480px) and (max-height:414px) {
+	.intro-model {
+		height:208px;
+	}
+}
+
+// Change size and bg image on non-mobile devices
+@media (min-width:415px) and (max-width:767px) {
+	.intro-model {
+		height: 400px;
+	}
+}
+@media (min-width:768px) {
+	.intro-model {
+	 height:100vh;
+	}
+}
+
+@media (min-width:415px) and (min-height:737px) {
+	.intro-model {
+		&.om-r {
+			background:url(../images/om-r-header.jpg) no-repeat top center/cover;
+		}
+		&.oo-r {
+			background:url(../images/oo-r-header.jpg) no-repeat top center/cover;
+		}
+	}
+}
+@media (min-width:415px) and (min-height:737px) {
+	.intro-model {
+		&.om-r {
+			background:url(../images/om-r-header.jpg) no-repeat top center/cover;
+		}
+		&.oo-r {
+			background:url(../images/oo-r-header.jpg) no-repeat top center/cover;
+		}
+	}
+}
+
+
 .model-info {
 	@extend %section-vertical-padding;
+	padding-bottom: 50px;
 }
 
 .model-detail-grid {
@@ -30,8 +68,8 @@
 
 .model-description {
 	font-size:20px;
-	line-height:28px;
-	max-width: 944px;
+	line-height:1.45;
+	max-width: 1000px;
 	margin: 0 auto $standard-spacing;
 	position: relative;
 	// Separator line
@@ -46,11 +84,12 @@
 }
 
 .model-specs {
+	padding-left: 0;
 	margin-bottom:0;
 	font-size:16px;
 	li {
 		display: inline-block;
-		margin:0 18px;
+		margin:0 18px 10px;
 		position: relative;
 		span {
 			font-size:20px;
@@ -78,5 +117,11 @@
 				display: none;
 			}
 		}
+	}
+}
+
+@media (max-width:568px) {
+	.model-specs {
+		font-size:13px;
 	}
 }

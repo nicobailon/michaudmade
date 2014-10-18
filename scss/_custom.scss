@@ -184,6 +184,10 @@ hr {
 	text-align:center;
 }
 
+.row-container {
+	overflow: auto;
+}
+
 // target only Chrome & Safari
 @media
 only screen and (-webkit-min-device-pixel-ratio:0),
@@ -204,7 +208,7 @@ h1,h2 {
 }
 h1 {
 	font-size:52px;
-	line-height:58px;
+	line-height:1.115;
 }
 h2 {
 	font-size:36px;
