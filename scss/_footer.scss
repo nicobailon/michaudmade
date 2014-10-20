@@ -9,9 +9,12 @@
 	}
 }
 
-form {
+form.contact-form {
 	font-size:18px;
 	line-height:2;
+	> .col-md-6 {
+		height:199px;
+	}
 	input[type="text"],
 	input[type="email"],
 	textarea {
@@ -37,10 +40,15 @@ form {
 		height:45px;
 		line-height: 1;
 	}
+	input[name="subject"],
 	textarea {
-		height: 11em;
+		margin-bottom:0;
+	}
+	textarea {
+		height: 11.08em;
 	}
 	input[type="submit"] {
+		margin-top:$standard-spacing;
 		background:none;
 	}
 }

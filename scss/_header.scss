@@ -1,23 +1,188 @@
+// Mobile Header
+@media (max-width:614px) {
+	.header-menu {
+		nav {
+			display: none;
+		}
+	}	
+}
+
+
+.site-menu {
+	a,.dropdown-toggle {
+		&:hover,
+		&:focus {
+			background:inherit;
+			color:$brown !important;
+		}
+	}
+}
+
+
+#mobile-menu {
+	@extend %font-smoothing-on;
+	@include transition-property(all);
+  @include transition-duration(0.2s);
+  @include transition-timing-function(ease-in);
+	position: fixed;
+	min-width: 237px;
+	top:0;
+	left:0;
+	bottom:0;
+	padding-bottom:$standard-spacing;
+	font-size:15px;
+	background:#333;
+	z-index:4;
+	overflow-y: scroll;
+	overflow-y: -moz-scrollbars-none;
+	-webkit-overflow-scrolling: touch;
+	opacity:0;
+	&::-webkit-scrollbar { 
+	    display: none; 
+	}
+	a,.mobile-dropdown-toggle {
+		display: block;
+		color:white;
+		@include transition-property(color,background);
+	  @include transition-duration(0.25s);
+	  @include transition-timing-function(ease-in);
+		color:white;
+		&:hover,
+		&:focus {
+			color:$brown;
+		}
+	}
+	> .mobile-menu-item,
+	.mobile-dropdown-toggle {
+		z-index: 2;
+		position: relative;
+	}
+	.mobile-menu-item {
+		display: block;
+		line-height: 54px;
+		border-bottom:1px solid #484848;
+		padding:0 10px;
+		background:#333;
+		z-index: 1;
+	}
+	.mobile-dropdown-menu .mobile-menu-item {
+		@include transition-property(border);
+  	@include transition-duration(0.3s);
+		border-bottom:1px solid #2d2d2d;
+		background:black;
+		border-left:2px solid #333;
+		&:hover {
+			border-left:2px solid $brown;
+		}
+	}
+	.mobile-menu-item.last-item {
+		margin:40px 0 24px;
+		border:0;
+		text-align: center;
+		.button {
+			width:100%;
+		}
+	}
+	.mobile-menu-item-bottom {
+		line-height: 32px;
+		text-align: center;
+		.social-icon {
+			display: inline-block;
+			margin:0 16px;
+		}
+	}
+	&.show {
+		-webkit-transform:translate(0,0) !important;
+	}
+}
+
+#mobile-menu.show {
+	opacity: 1;
+}
+
+#mobile-menu-overlay {
+	@include transition-property(opacity);
+  @include transition-duration(0.24s);
+	display:block;
+	position: fixed;
+	top:$header-height; right:0; left:0; bottom:0;
+	background:rgba(black,0.8);
+	opacity:0;
+	#mobile-menu.show + & {
+		z-index: 3;
+		opacity: 1;
+	}
+}
+
+.mobile-dropdown-menu {
+	@include transition-property(-webkit-transform);
+  @include transition-duration(0.2s);
+  @include transition-delay(0.01s);
+	-webkit-transform: translate(0,-108px);
+	list-style: none;
+	margin:0;
+	padding:0;
+	height:0;
+	overflow:hidden;
+	a {
+		pointer-events:none;
+	}
+}
+
+.mobile-dropdown-toggle {
+	span {
+		font-size:28px;
+		font-weight: 100;
+	}
+	&.show + .mobile-dropdown-menu {
+		height:auto;
+		-webkit-transform: translate(0,0);
+		a {
+			pointer-events:inherit;
+		}
+	}
+}
+
+
+
+.mobile-menu-icon {
+	z-index: 1;
+	position: absolute;
+	left:20px;
+	top:34px;
+}
+
+
+
 // Header
 
 .header-menu {
 	@include transition-property(all);
   @include transition-duration(0.24s);
   @include transition-timing-function(ease-in);
-	
-	position: static;
+	position: relative;
 	top:0;
 	min-height:$header-height;
 	line-height: $header-height;
 	width: 100%;
 	z-index: 2;
-	background: black;
+	background:black;
 	color:white;
 	a {
 		color:white;
 	}
-	.social-icon svg {
-		vertical-align: middle;
+}
+
+@media (min-width:414px) and (min-height:737px) {
+	.header-menu {
+		background:none;
+	}
+}
+
+@media (min-width:992px) {
+	.mobile-menu,
+	.mobile-menu-icon {
+		display: none;
 	}
 }
 
@@ -28,11 +193,9 @@
   }
 }
 
-// Resize banner on mobile
 @media (min-width:415px) and (min-height:737px) {
 	.header-menu {
 		position: absolute;
-		background:none;
 		&.dark-bg {
 			background: black;
 		}
@@ -42,7 +205,6 @@
 @media (min-width:737px) and (min-height:414px) {
 	.header-menu {
 		position: absolute;
-		background:none;
 		&.dark-bg {
 			background: black;
 		}
@@ -59,22 +221,15 @@
 	}
 }
 
-@media (max-width:768px) {
-	.header-menu {
-		min-height:$header-height/2;
-		line-height: $header-height/2;
-	}
-}
-@media (min-width:769px) and (max-width:991px) {
-	.header-menu {
-		min-height:$header-height/1.5;
-		line-height: $header-height/1.5;
-	}
-}
 
 $transparentshadow: rgba(black, 0.1);
 .header-menu.dark-bg {
 	box-shadow:0px 8px 0px $transparentshadow;
+}
+@media (max-width:614px) {
+	.header-menu.dark-bg {
+		box-shadow:0px 6px 0px $transparentshadow;
+	}
 }
 
 .site-logo {
@@ -83,19 +238,38 @@ $transparentshadow: rgba(black, 0.1);
 	margin:0;
 	font-weight:bold;
 	text-transform:uppercase;
-	img {
-		vertical-align: -1px;
-	}
-	svg path {
-		fill:white;
+	svg {
+		@include transition-property(fill);
+	  @include transition-duration(0.25s);
+	  @include transition-timing-function(ease-in);
+		width:193px;
+		height:14px;
+		fill:#efefef;
+		&:hover {
+			fill:$brown;
+		}
 	}
 }
 
+@media (max-width:375px) {
+	.site-logo svg { max-width:44.375%; }
+}
+
+.site-menu {
+	// hide on mobile
+	display:none;
+}
+
+@media (min-width:992px) {
+	.site-menu {
+		display: block;
+	}
+}
+
+
+
 .site-menu {
 	a,.dropdown {
-		@include transition-property(color,background);
-	  @include transition-duration(0.3s);
-	  @include transition-timing-function(ease-in);
 		display: inline;
 		padding:0 15px;
 		&.border-left:before {
@@ -125,8 +299,8 @@ $transparentshadow: rgba(black, 0.1);
 	.dropdown-menu {
 		@include border-radius(0);
 		@include transition-property(all);
-	  @include transition-duration(0.3s);
-	  @include transition-timing-function(ease-in-out);
+	  @include transition-duration(0.25s);
+	  @include transition-timing-function(ease-in);
 		display: block;
 		top: 17px;
 		padding: 13px 0 0;
@@ -140,19 +314,31 @@ $transparentshadow: rgba(black, 0.1);
 		pointer-events:none;
 		a {
 			padding: 10px 24px;
-		}
-		a {
 			color:white;
-			&:hover,
-			&:focus {
+			&:hover {
 				background:inherit;
-				color:$brown !important;
 			}
 		}
+	}
+}
+
+.social-icon {
+	svg {
+		vertical-align: middle;
+	}
+	&.instagram-link:hover .icon-fill,
+	&.instagram-link:focus .icon-fill,
+	&.facebook-link:hover .icon-fill,
+	&.facebook-link:focus .icon-fill {
+		background:inherit;
+		fill:$brown;
 		.dark-bg & {
-			// when header bg is dark, drop down menu bg should also be dark
-			background:black;
+			fill:$brown;
 		}
+	}
+	&.facebook-link svg {
+		height: 30px;
+		width: 30px;
 	}
 	.icon-fill {
 		@include transition-property(fill);
@@ -161,6 +347,7 @@ $transparentshadow: rgba(black, 0.1);
 		fill:rgba(white,0.5);
 	}
 }
+
 
 @media (max-width:407px) {
 	.site-menu .dropdown.show-menu .dropdown-menu {
@@ -186,18 +373,6 @@ $transparentshadow: rgba(black, 0.1);
 		}
 	}
 }
-
-.instagram-link:hover .icon-fill,
-.instagram-link:focus .icon-fill,
-.facebook-link:hover .icon-fill,
-.facebook-link:focus .icon-fill {
-	background:inherit;
-	fill:$brown;
-	.dark-bg & {
-		fill:$brown;
-	}
-}
-
 
 
 @media (min-width: 992px) {
@@ -251,7 +426,7 @@ $transparentshadow: rgba(black, 0.1);
 }
 
 @media (min-width:768px) and (min-height:768px) {
-	.page-banner {
+	.page-banner.intro-home {
 	 height:100vh;
 	}
 }
@@ -297,13 +472,6 @@ $transparentshadow: rgba(black, 0.1);
 		margin-top:0;
 	}
 }
-
-@media (max-width: 800px) {
-	.header-menu {
-		padding-bottom: 12px;
-	}
-}
-
 
 @media (min-width: 416px) and (min-height: 416px) and (max-width:766px) {
 	.page-banner h1 {

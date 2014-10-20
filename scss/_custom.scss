@@ -10,6 +10,10 @@ $almost-black: #141414;
 $gray: #999;
 $lightgray: #dedede;
 
+.gray {
+	color:$gray;
+}
+
 $standard-spacing: 48px;
 
 @import "compass/css3/transition";
@@ -149,7 +153,7 @@ hr {
 	.site-menu &:active,
 	.site-menu &:focus {
 		background:white;
-		color:black;
+		color:black !important;
 	}
 	.dark-bg &,
 	&:hover,
@@ -169,14 +173,31 @@ hr {
 .dark-bg .site-menu .dropdown-menu {
 	background:$almost-black;
 }
-.dark-bg .button:hover, 
-.dark-bg .button:active,
-.dark-bg .button:focus {
-	color:black; background:white;
+
+.dark-bg,
+#mobile-menu {
+	.button:hover, 
+	.button:active,
+	.button:focus {
+		color:black;
+		background:white;
+	}
+}
+
+.noscroll {
+	overflow:hidden;
 }
 
 .wrapper {
 	padding:0;
+	@include transition-property(all);
+  @include transition-duration(0.25s);
+  @include transition-timing-function(ease-in);
+  position:absolute;
+  &:not(.slide) {
+  	left:0 !important;
+  	right:0;
+  }
 }
 
 .container {

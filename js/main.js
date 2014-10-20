@@ -24,21 +24,87 @@ $(function() {
         function() {
             $(dropdown).addClass("show-menu");
         }, function() {
-            setTimeout(function() {
-                $(dropdown).removeClass("show-menu");
-            }, 100);
+            $(dropdown).removeClass("show-menu");
         }
     );
     $(dropdownmenu).hover(
         function() {
             $(dropdown).addClass("show-dropdown");
         }, function() {
-            setTimeout(function() {
-                $(dropdown).removeClass("show-dropdown");
-            }, 100);
+            $(dropdown).removeClass("show-dropdown");
         }
     );
 });
+
+// Mobile nav menu
+$(function() {
+    var screenWidth = $(window).width();
+    var menuToggleWidth = "83";
+    var slideWidth = (screenWidth - menuToggleWidth) + 'px';
+    var mobileMenu = document.getElementById('mobile-menu');
+    var mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    var mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    var mobileDropDownToggle = document.getElementById('mobileDropdownModels');
+    var bodyWrap = document.getElementById('page-wrap');
+    var calculateWidth = $(mobileMenu).css({
+        'right': slideWidth,
+        'width': slideWidth,
+        '-webkit-transform':'translate(-' + slideWidth + ',0)'
+    });
+    var bodySlide = $(bodyWrap).css({
+      'left': slideWidth
+    });
+    $(mobileMenu).on('touchstart', function(event){});
+
+    $(mobileMenuToggle).click(function() {
+        console.log('click');
+        $(mobileMenu).toggleClass('show');
+        $('body').toggleClass('noscroll');
+        $(bodyWrap).toggleClass('slide');
+    });
+
+    $(mobileMenuOverlay).click(function() {
+        $(mobileMenu).removeClass('show');
+        $('body').removeClass('noscroll');
+        $(bodyWrap).removeClass('slide');
+    });
+
+    $(mobileDropDownToggle).click(function(){
+      $(this).toggleClass('show');
+    });
+
+    // Register handler for resize-events
+    $(window).resize(handleResize);
+
+    // indicated if an event already has been detected
+    var debouncingActive = false;
+
+    // Timeout value for deferring event processing
+    var debouncingTime = 450;
+
+    // implementes the debouncing of events
+    function handleResize() {
+      if(false === debouncingActive) {
+         debouncingActive = true;
+         setTimeout(smartResizeHandler, debouncingTime);
+      }
+    }
+    // Re-process sizing when orientation changed
+    function smartResizeHandler() {
+      var screenWidth = $(window).width();
+      var slideWidth = (screenWidth - menuToggleWidth) + 'px';
+      $(mobileMenu).css({
+          'right': slideWidth,
+          'width': slideWidth,
+          '-webkit-transform':'translate(-' + slideWidth + ',0)'
+      });
+      $(bodyWrap).css({
+        'left': slideWidth
+      });
+      debouncingActive = false;
+    }
+});
+
 
 
 
@@ -57,9 +123,8 @@ $(function() {
 
 
 // Parallax
-// Run only on desktop
-
 $(function() {
+    // Run only on desktop
     if ((window.innerWidth > 767) && (window.innerHeight > 959))  {
         $('.parallax').scrolly({bgParallax: true});
     } else if ((window.innerWidth > 959) && (window.innerHeight > 767))  {

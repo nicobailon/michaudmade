@@ -97,7 +97,7 @@
 }
 
 // Change size and bg image on non-mobile devices
-@media (min-width:415px) {
+@media (min-width:415px) and (min-height:737px) {
 	.intro-home {
 		height:500px;
 	}
