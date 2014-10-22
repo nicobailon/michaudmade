@@ -80,7 +80,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // Uncomment for Development
     includes: {
       default: {
         cwd: 'templates',

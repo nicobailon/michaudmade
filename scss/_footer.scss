@@ -50,6 +50,9 @@ form.contact-form {
 	input[type="submit"] {
 		margin-top:$standard-spacing;
 		background:none;
+		&:hover {
+			background:black;
+		}
 	}
 }
 
@@ -64,6 +67,14 @@ footer {
 	}
 	.copyright-info {
 		max-width: 74%;
+	}
+}
+
+@media (max-width:892px) {
+	form.contact-form {
+		> .col-md-6:first-child {
+			margin-bottom:32px;
+		}
 	}
 }
 

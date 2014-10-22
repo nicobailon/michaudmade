@@ -46,18 +46,20 @@ $(function() {
     var mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
     var mobileDropDownToggle = document.getElementById('mobileDropdownModels');
     var bodyWrap = document.getElementById('page-wrap');
+    var bodyWrapWidth = screenWidth + 'px';
     var calculateWidth = $(mobileMenu).css({
         'right': slideWidth,
         'width': slideWidth,
         '-webkit-transform':'translate(-' + slideWidth + ',0)'
     });
     var bodySlide = $(bodyWrap).css({
-      'left': slideWidth
+      'left': slideWidth,
+      'right': '-' + slideWidth
     });
+
     $(mobileMenu).on('touchstart', function(event){});
 
     $(mobileMenuToggle).click(function() {
-        console.log('click');
         $(mobileMenu).toggleClass('show');
         $('body').toggleClass('noscroll');
         $(bodyWrap).toggleClass('slide');
@@ -93,13 +95,15 @@ $(function() {
     function smartResizeHandler() {
       var screenWidth = $(window).width();
       var slideWidth = (screenWidth - menuToggleWidth) + 'px';
+      // var bodyWrapWidth = screenWidth + 'px';
       $(mobileMenu).css({
           'right': slideWidth,
           'width': slideWidth,
           '-webkit-transform':'translate(-' + slideWidth + ',0)'
       });
       $(bodyWrap).css({
-        'left': slideWidth
+        'left': slideWidth,
+        'right': '-' + slideWidth
       });
       debouncingActive = false;
     }
@@ -177,4 +181,18 @@ modelDesc.flowtype({
     fontRatio : 40,
     minFont : 13,
     maxFont : 20
+});
+
+
+
+// Close lightbox (gallery)
+$(function() {
+    var galleryLink = $('.gallery-post a');
+    var lightboxOverlay = document.getElementById('lightboxOverlay');
+    var closeLightBox = document.getElementById('close-lightbox');
+    var documentBody = $('body');
+    galleryLink.click(function(){
+        $(documentBody).addClass('show-lightbox');
+    });
+    
 });

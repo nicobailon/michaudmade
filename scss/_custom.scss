@@ -140,6 +140,7 @@ hr {
 	@include transition-property(background,color);
 	@include transition-duration(0.16s);
 	@include transition-timing-function(ease-in-out);
+	-webkit-appearance:none;
 	display:inline-block;
 	padding:0 28px;
 	border:1px solid;
@@ -190,14 +191,24 @@ hr {
 
 .wrapper {
 	padding:0;
-	@include transition-property(all);
-  @include transition-duration(0.25s);
-  @include transition-timing-function(ease-in);
-  position:absolute;
   &:not(.slide) {
   	left:0 !important;
-  	right:0;
+  	right:0 !important;
   }
+}
+@media (min-width:992px) {
+	.wrapper {
+		width:auto !important;
+	}
+}
+
+@media (max-width:992px) {
+	.wrapper {
+		@include transition-property(all);
+	  @include transition-duration(0.2s);
+	  @include transition-timing-function(ease-in);
+	  position:absolute;
+	}
 }
 
 .container {
@@ -248,5 +259,9 @@ h4 {
 @import "features";
 
 @import "model-detail";
+
+@import "lightbox";
+
+@import "gallery";
 
 @import "footer";
