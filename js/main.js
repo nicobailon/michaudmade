@@ -45,16 +45,10 @@ $(function() {
     var mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     var mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
     var mobileDropDownToggle = document.getElementById('mobileDropdownModels');
-    var bodyWrap = document.getElementById('page-wrap');
-    var bodyWrapWidth = screenWidth + 'px';
     var calculateWidth = $(mobileMenu).css({
         'right': slideWidth,
         'width': slideWidth,
         '-webkit-transform':'translate(-' + slideWidth + ',0)'
-    });
-    var bodySlide = $(bodyWrap).css({
-      'left': slideWidth,
-      'right': '-' + slideWidth
     });
 
     $(mobileMenu).on('touchstart', function(event){});
@@ -62,13 +56,11 @@ $(function() {
     $(mobileMenuToggle).click(function() {
         $(mobileMenu).toggleClass('show');
         $('body').toggleClass('noscroll');
-        $(bodyWrap).toggleClass('slide');
     });
 
     $(mobileMenuOverlay).click(function() {
         $(mobileMenu).removeClass('show');
         $('body').removeClass('noscroll');
-        $(bodyWrap).removeClass('slide');
     });
 
     $(mobileDropDownToggle).click(function(){
@@ -100,10 +92,6 @@ $(function() {
           'right': slideWidth,
           'width': slideWidth,
           '-webkit-transform':'translate(-' + slideWidth + ',0)'
-      });
-      $(bodyWrap).css({
-        'left': slideWidth,
-        'right': '-' + slideWidth
       });
       debouncingActive = false;
     }

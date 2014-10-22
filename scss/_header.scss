@@ -105,13 +105,17 @@
   @include transition-duration(0.24s);
 	display:block;
 	position: fixed;
-	top:$header-height; right:0; left:0; bottom:0;
+	top:0; right:0; left:0; bottom:0;
 	background:rgba(black,0.8);
 	opacity:0;
 	z-index: -1;
 	#mobile-menu.show + & {
 		z-index: 3;
 		opacity: 1;
+	}
+	.mobile-menu-icon {
+		left: auto;
+		right: 31px;
 	}
 }
 
