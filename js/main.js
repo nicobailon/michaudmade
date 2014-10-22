@@ -127,60 +127,56 @@ $(function() {
 
 
 // Flowtype
-var bannerText = $('.page-banner h1');
-bannerText.flowtype({
-    minimum : 320,
-    maximum : 992,
-    fontRatio : 12,
-    minFont : 24,
-    maxFont : 52
-});
-
-var aboutText = $('.about-text p');
-aboutText.flowtype({
-    minimum : 320,
-    maximum : 992,
-    fontRatio : 34,
-    minFont : 13,
-    maxFont : 20
-});
-
-var boxTitle = $('.box-overlay h3');
-var boxParagraph = $('.box-overlay p');
-boxTitle.flowtype({
-    minimum : 320,
-    maximum : 1024,
-    fontRatio : 15,
-    minFont : 16,
-    maxFont : 24
-});
-boxParagraph.flowtype({
-    minimum : 320,
-    maximum : 1024,
-    fontRatio : 25,
-    minFont : 12,
-    maxFont : 16
-});
-
-var modelDesc = $('.model-description');
-modelDesc.flowtype({
-    minimum : 320,
-    maximum : 1024,
-    fontRatio : 40,
-    minFont : 13,
-    maxFont : 20
-});
-
-
-
-// Close lightbox (gallery)
 $(function() {
-    var galleryLink = $('.gallery-post a');
-    var lightboxOverlay = document.getElementById('lightboxOverlay');
-    var closeLightBox = document.getElementById('close-lightbox');
-    var documentBody = $('body');
-    galleryLink.click(function(){
-        $(documentBody).addClass('show-lightbox');
+    var bannerText = $('.page-banner h1');
+    bannerText.flowtype({
+        minimum : 320,
+        maximum : 992,
+        fontRatio : 12,
+        minFont : 24,
+        maxFont : 52
     });
-    
+
+    var aboutText = $('.about-text p');
+    aboutText.flowtype({
+        minimum : 320,
+        maximum : 992,
+        fontRatio : 34,
+        minFont : 13,
+        maxFont : 20
+    });
+
+    var boxTitle = $('.box-overlay h3');
+    var boxParagraph = $('.box-overlay p');
+    boxTitle.flowtype({
+        minimum : 320,
+        maximum : 1024,
+        fontRatio : 15,
+        minFont : 16,
+        maxFont : 24
+    });
+    boxParagraph.flowtype({
+        minimum : 320,
+        maximum : 1024,
+        fontRatio : 25,
+        minFont : 12,
+        maxFont : 16
+    });
+
+    var modelDesc = $('.model-description');
+    modelDesc.flowtype({
+        minimum : 320,
+        maximum : 1024,
+        fontRatio : 40,
+        minFont : 13,
+        maxFont : 20
+    });
+});
+
+
+// Ligthbox ()
+baguetteBox.run('.gallery-grid', {
+  buttons: 'true',
+  preload: 1,
+  animation: 'fadeIn'
 });

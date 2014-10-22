@@ -7966,241 +7966,224 @@ h4 {
     font-size: 13px;
   }
 }
-/* Preload images */
-/* line 2, ../scss/_lightbox.scss */
-body:after {
-  content: url(../img/close.png) url(../img/loading.gif) url(../img/prev.png) url(../img/next.png);
+/*!
+ * baguetteBox.js
+ * @author  feimosi
+ * @version 1.1.1
+ * @url https://github.com/feimosi/baguetteBox.js
+ */
+/* line 8, ../scss/_lightbox.scss */
+#baguetteBox-overlay {
   display: none;
-}
-
-/* line 7, ../scss/_lightbox.scss */
-.lightboxOverlay {
-  position: absolute;
+  opacity: 0;
+  position: fixed;
+  overflow: hidden;
   top: 0;
   left: 0;
-  z-index: 9999;
-  background-color: black;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
-  display: none;
-}
-
-/* line 18, ../scss/_lightbox.scss */
-.lightbox {
-  position: absolute;
-  left: 0;
   width: 100%;
-  z-index: 10000;
-  text-align: center;
-  line-height: 0;
-  font-weight: normal;
+  height: 100%;
+  z-index: 1000000;
+  background-color: #222;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity .5s ease;
 }
-
-/* line 28, ../scss/_lightbox.scss */
-.lightbox .lb-image {
-  display: block;
-  height: auto;
-  max-width: inherit;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
+/* line 22, ../scss/_lightbox.scss */
+#baguetteBox-overlay.visible {
+  opacity: 1;
 }
-
-/* line 39, ../scss/_lightbox.scss */
-.lightbox a img {
-  border: none;
-}
-
-/* line 43, ../scss/_lightbox.scss */
-.lb-outerContainer {
+/* line 26, ../scss/_lightbox.scss */
+#baguetteBox-overlay .full-image {
+  display: inline-block;
   position: relative;
-  background-color: white;
-  *zoom: 1;
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
-
-/* line 57, ../scss/_lightbox.scss */
-.lb-outerContainer:after {
-  content: "";
-  display: table;
-  clear: both;
+/* line 33, ../scss/_lightbox.scss */
+#baguetteBox-overlay .full-image figure {
+  display: inline;
+  margin: 0;
+  height: 100%;
 }
-
-/* line 63, ../scss/_lightbox.scss */
-.lb-container {
-  padding: 4px;
+/* line 39, ../scss/_lightbox.scss */
+#baguetteBox-overlay .full-image img {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
-
-/* line 67, ../scss/_lightbox.scss */
-.lb-loader {
+/* line 51, ../scss/_lightbox.scss */
+#baguetteBox-overlay .full-image figcaption {
+  display: block;
   position: absolute;
-  top: 43%;
-  left: 0;
-  height: 25%;
+  bottom: 0;
   width: 100%;
   text-align: center;
-  line-height: 0;
-}
-
-/* line 77, ../scss/_lightbox.scss */
-.lb-cancel {
-  display: block;
-  width: 32px;
-  height: 32px;
-  margin: 0 auto;
-  background: url(../img/loading.gif) no-repeat;
-}
-
-/* line 85, ../scss/_lightbox.scss */
-.lb-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-}
-
-/* line 94, ../scss/_lightbox.scss */
-.lb-container > .nav {
-  left: 0;
-}
-
-/* line 98, ../scss/_lightbox.scss */
-.lb-nav a {
-  outline: none;
-  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
-}
-
-/* line 103, ../scss/_lightbox.scss */
-.lb-prev, .lb-next {
-  height: 100%;
-  cursor: pointer;
-  display: block;
-}
-
-/* line 109, ../scss/_lightbox.scss */
-.lb-nav a.lb-prev {
-  width: 34%;
-  left: 0;
-  float: left;
-  background: url(../img/prev.png) left 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
-}
-
-/* line 122, ../scss/_lightbox.scss */
-.lb-nav a.lb-prev:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-/* line 127, ../scss/_lightbox.scss */
-.lb-nav a.lb-next {
-  width: 64%;
-  right: 0;
-  float: right;
-  background: url(../img/next.png) right 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
-}
-
-/* line 140, ../scss/_lightbox.scss */
-.lb-nav a.lb-next:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-/* line 145, ../scss/_lightbox.scss */
-.lb-dataContainer {
-  margin: 0 auto;
-  padding-top: 5px;
-  *zoom: 1;
-  width: 100%;
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-/* line 158, ../scss/_lightbox.scss */
-.lb-dataContainer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 164, ../scss/_lightbox.scss */
-.lb-data {
-  padding: 0 4px;
+  line-height: 1.8;
   color: #ccc;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-family: sans-serif;
+}
+/* line 64, ../scss/_lightbox.scss */
+#baguetteBox-overlay .full-image:before {
+  content: "";
+  display: inline-block;
+  height: 50%;
+  width: 1px;
+  margin-right: -1px;
 }
 
-/* line 169, ../scss/_lightbox.scss */
-.lb-data .lb-details {
-  width: 85%;
-  float: left;
-  text-align: left;
-  line-height: 1.1em;
+/* line 74, ../scss/_lightbox.scss */
+#baguetteBox-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  white-space: nowrap;
+  transition: left .4s ease, transform .4s ease;
+}
+/* line 83, ../scss/_lightbox.scss */
+#baguetteBox-slider.bounce-from-right {
+  animation: bounceFromRight .4s ease-out;
+}
+/* line 87, ../scss/_lightbox.scss */
+#baguetteBox-slider.bounce-from-left {
+  animation: bounceFromLeft .4s ease-out;
 }
 
-/* line 176, ../scss/_lightbox.scss */
-.lb-data .lb-caption {
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 1em;
+@keyframes bounceFromRight {
+  /* line 93, ../scss/_lightbox.scss */
+  0% {
+    margin-left: 0;
+  }
+
+  /* line 94, ../scss/_lightbox.scss */
+  50% {
+    margin-left: -30px;
+  }
+
+  /* line 95, ../scss/_lightbox.scss */
+  100% {
+    margin-left: 0;
+  }
 }
 
-/* line 182, ../scss/_lightbox.scss */
-.lb-data .lb-number {
-  display: block;
-  clear: left;
-  padding-bottom: 1em;
-  font-size: 12px;
-  color: #999999;
+@keyframes bounceFromLeft {
+  /* line 99, ../scss/_lightbox.scss */
+  0% {
+    margin-left: 0;
+  }
+
+  /* line 100, ../scss/_lightbox.scss */
+  50% {
+    margin-left: 30px;
+  }
+
+  /* line 101, ../scss/_lightbox.scss */
+  100% {
+    margin-left: 0;
+  }
 }
 
-/* line 190, ../scss/_lightbox.scss */
-.lb-data .lb-close {
-  display: block;
-  float: right;
+/* line 104, ../scss/_lightbox.scss */
+.baguetteBox-button#next-button, .baguetteBox-button#previous-button {
+  top: 50%;
+  top: calc(50% - 30px);
+  width: 44px;
+  height: 60px;
+}
+
+/* line 111, ../scss/_lightbox.scss */
+.baguetteBox-button {
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 15%;
+  background-color: #323232;
+  background-color: rgba(50, 50, 50, 0.5);
+  color: #ddd;
+  font: 1.6em sans-serif;
+  transition: background-color .4s ease;
+}
+/* line 125, ../scss/_lightbox.scss */
+.baguetteBox-button:hover {
+  background-color: rgba(50, 50, 50, 0.9);
+}
+/* line 129, ../scss/_lightbox.scss */
+.baguetteBox-button#next-button {
+  right: 2%;
+}
+/* line 134, ../scss/_lightbox.scss */
+.baguetteBox-button#previous-button {
+  left: 2%;
+}
+/* line 139, ../scss/_lightbox.scss */
+.baguetteBox-button#close-button {
+  top: 20px;
+  right: 2%;
+  right: calc(2% + 6px);
   width: 30px;
   height: 30px;
-  background: url(../img/close.png) top right no-repeat;
-  text-align: right;
-  outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
-  -webkit-transition: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+}
+/* line 148, ../scss/_lightbox.scss */
+.baguetteBox-button svg {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-/* line 206, ../scss/_lightbox.scss */
-.lb-data .lb-close:hover {
-  cursor: pointer;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
+/*
+    Preloader
+    Borrowed from http://tobiasahlin.com/spinkit/
+*/
+/* line 160, ../scss/_lightbox.scss */
+.spinner {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+/* line 171, ../scss/_lightbox.scss */
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: .6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: bounce 2.0s infinite ease-in-out;
+}
+
+/* line 183, ../scss/_lightbox.scss */
+.double-bounce2 {
+  animation-delay: -1.0s;
+}
+
+@keyframes bounce {
+  /* line 188, ../scss/_lightbox.scss */
+  0%, 100% {
+    transform: scale(0);
+  }
+
+  /* line 190, ../scss/_lightbox.scss */
+  50% {
+    transform: scale(1);
+  }
 }
 
 /* line 3, ../scss/_gallery.scss */
@@ -8403,8 +8386,9 @@ form.contact-form {
 /* line 15, ../scss/_footer.scss */
 form.contact-form > .col-md-6 {
   height: 199px;
+  margin-bottom: 32px;
 }
-/* line 20, ../scss/_footer.scss */
+/* line 21, ../scss/_footer.scss */
 form.contact-form input[type="text"],
 form.contact-form input[type="email"],
 form.contact-form textarea {
@@ -8427,7 +8411,7 @@ form.contact-form textarea {
   margin-bottom: 32px;
   font-weight: 300;
 }
-/* line 32, ../scss/_footer.scss */
+/* line 33, ../scss/_footer.scss */
 form.contact-form input[type="text"]:focus, form.contact-form input[type="text"]:active, form.contact-form input[type="text"]:hover,
 form.contact-form input[type="email"]:focus,
 form.contact-form input[type="email"]:active,
@@ -8438,54 +8422,48 @@ form.contact-form textarea:hover {
   border-color: #a44b26;
   outline: none;
 }
-/* line 38, ../scss/_footer.scss */
+/* line 39, ../scss/_footer.scss */
 form.contact-form input[type="text"],
 form.contact-form input[type="email"] {
   display: block;
   height: 45px;
   line-height: 1;
 }
-/* line 44, ../scss/_footer.scss */
+/* line 45, ../scss/_footer.scss */
 form.contact-form input[name="subject"],
 form.contact-form textarea {
   margin-bottom: 0;
 }
-/* line 47, ../scss/_footer.scss */
+/* line 48, ../scss/_footer.scss */
 form.contact-form textarea {
   height: 11.08em;
 }
-/* line 50, ../scss/_footer.scss */
+/* line 51, ../scss/_footer.scss */
 form.contact-form input[type="submit"] {
-  margin-top: 48px;
+  margin-top: 16px;
   background: none;
 }
-/* line 53, ../scss/_footer.scss */
+/* line 54, ../scss/_footer.scss */
 form.contact-form input[type="submit"]:hover {
   background: black;
 }
 
-/* line 61, ../scss/_footer.scss */
+/* line 62, ../scss/_footer.scss */
 footer {
   padding-top: 32px;
   padding-bottom: 120px;
 }
-/* line 65, ../scss/_footer.scss */
+/* line 66, ../scss/_footer.scss */
 footer a {
   display: inline-block;
 }
-/* line 68, ../scss/_footer.scss */
+/* line 69, ../scss/_footer.scss */
 footer .copyright-info {
   max-width: 74%;
 }
 
-@media (max-width: 892px) {
-  /* line 75, ../scss/_footer.scss */
-  form.contact-form > .col-md-6:first-child {
-    margin-bottom: 32px;
-  }
-}
 @media (max-width: 600px) {
-  /* line 82, ../scss/_footer.scss */
+  /* line 76, ../scss/_footer.scss */
   footer {
     font-size: 12px;
   }

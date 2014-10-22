@@ -14,6 +14,7 @@ form.contact-form {
 	line-height:2;
 	> .col-md-6 {
 		height:199px;
+		margin-bottom:32px;
 	}
 	input[type="text"],
 	input[type="email"],
@@ -48,7 +49,7 @@ form.contact-form {
 		height: 11.08em;
 	}
 	input[type="submit"] {
-		margin-top:$standard-spacing;
+		margin-top:16px;
 		background:none;
 		&:hover {
 			background:black;
@@ -70,13 +71,6 @@ footer {
 	}
 }
 
-@media (max-width:892px) {
-	form.contact-form {
-		> .col-md-6:first-child {
-			margin-bottom:32px;
-		}
-	}
-}
 
 @media (max-width:600px) {
 	footer {
